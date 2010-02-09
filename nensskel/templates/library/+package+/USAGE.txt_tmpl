@@ -1,0 +1,9 @@
+Usage of ${project}
+=============================================
+
+
+Usage:
+
+    >>> import ${package}
+
+Show how to import the main classes and how to use them.

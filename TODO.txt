@@ -6,3 +6,5 @@ Todo
 - Add the 3? needed templates.
 
 - Copy usable bits from zestskel/thaskel.
+
+- Fill in setup.py's description (i.e.: ask for it).

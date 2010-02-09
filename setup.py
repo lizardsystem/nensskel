@@ -1,18 +1,21 @@
 from setuptools import setup
 
+version = '0.1dev'
+
 long_description = '\n\n'.join(
     [open('README.txt').read(),
      open('CHANGES.txt').read(),
      open('TODO.txt').read()])
-version = '0.1dev'
+
 install_requires = [
     'setuptools',
     'Cheetah',
     'PasteScript>=1.6',
-    'uuid',
-    'z3c.testsetup',
     ]
-tests_require = []
+
+tests_require = [
+    'nose',
+    ]
 
 
 setup(
@@ -35,6 +38,6 @@ setup(
         'console_scripts': [
             ],
         'paste.paster_create_template':
-        [#'tha_website = thaskel.tha:WebSite',
+        ['nens_library = nensskel.library:Library',
             ]},
     )

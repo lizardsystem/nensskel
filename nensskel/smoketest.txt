@@ -1,0 +1,57 @@
+Just a burn test: create projects out of the templates and run buildout on
+them.
+
+The test setup prepares a temporary directory that is thrown away in the
+teardown method:
+
+    >>> import os
+    >>> from pprint import pprint
+    >>> os.listdir(tmp)
+    []
+
+Find paster:
+
+    >>> curdir = os.getcwd()
+    >>> paster = os.path.join(curdir, 'bin', 'paster')
+    >>> os.path.exists(paster)
+    True
+
+List the templates:
+
+    >>> print 'start', system(paster + ' create --list-templates') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start ...
+    nens_library:
+    ...
+
+Do the smoke tests:
+
+    >>> os.chdir(tmp)
+    >>> dont_care = system(paster + ' create -t nens_library aaa')
+    >>> pprint(sorted(os.listdir(os.path.join(tmp, 'aaa'))))
+    ['CHANGES.txt',
+     'CREDITS.txt',
+     'LICENSE.txt',
+     'README.txt',
+     'TODO.txt',
+     'aaa',
+     'aaa.egg-info',
+     'bootstrap.py',
+     'buildout.cfg',
+     'setup.py']
+
+And now for some serious buildout running
+
+    >>> os.chdir(os.path.join(tmp, 'aaa'))
+    >>> print 'start', system('python2.5 bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Creating directory .../aaa/bin'.
+    ...
+    Generated script .../aaa/bin/buildout'.
+    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
+    >>> if 'Traceback' in output:
+    ...     print output
+    ... else:
+    ...     print "succeeded"
+    succeeded
+
+
