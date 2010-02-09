@@ -1,23 +1,12 @@
-import os
 import sys
-import subprocess
 
 from paste.script import templates
+
+from nensskel import utils
 
 # Bloody hack for cheetah
 reload(sys)
 sys.setdefaultencoding('UTF-8')
-
-
-def svn_propset(dir, ignores, setting='svn:ignore'):
-    """If the dir is an svn dir, add ignores to svn:ignores"""
-    if not os.path.exists(os.path.join(dir, '.svn')):
-        # No svn dir, so we won't set anything.
-        # This also applies if the dir doesn't even exists.
-        return
-    to_ignore = '\n'.join(ignores)
-    # TODO: check if this works on windows.
-    subprocess.call(['svn', 'propset', setting, to_ignore, dir])
 
 
 class Library(templates.Template):
@@ -43,11 +32,12 @@ class Library(templates.Template):
     def post(self, command, output_dir, vars):
         """Clean up the result"""
         egginfo_dirname = '%(package)s.egg-info' % vars
-        svn_propset(output_dir, ['bin',
-                                 'develop-eggs',
-                                 'coverage',
-                                 'parts',
-                                 'eggs',
-                                 egginfo_dirname,
-                                 'var',
-                                 '.installed.cfg'])
+        utils.svn_propset(output_dir,
+                          ['bin',
+                           'develop-eggs',
+                           'coverage',
+                           'parts',
+                           'eggs',
+                           egginfo_dirname,
+                           'var',
+                           '.installed.cfg'])
