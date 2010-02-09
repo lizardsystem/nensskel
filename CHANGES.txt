@@ -5,5 +5,9 @@ Changelog for nensskel
 0.1 (unreleased)
 ----------------
 
+- Added djangoapp skeleton.
+
+- Added library skeleton.
+
 - Reinout copied relevant parts from the thaskel and zestskel that he made for
   the two previous companies he worked for.

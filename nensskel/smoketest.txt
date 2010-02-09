@@ -42,6 +42,23 @@ Do the smoke tests:
      'buildout.cfg',
      'setup.py']
 
+    >>> dont_care = system(paster + ' create -t nens_djangoapp li-zard')
+    >>> contents = sorted(os.listdir(os.path.join(tmp, 'li-zard')))
+    >>> if 'li_zard.egg-info' in contents:
+    ...     # Compensate for distribute/setuptools difference.
+    ...     contents.remove('li_zard.egg-info')
+    >>> pprint(contents)
+    ['CHANGES.txt',
+     'CREDITS.txt',
+     'LICENSE.txt',
+     'README.txt',
+     'TODO.txt',
+     'bootstrap.py',
+     'buildout.cfg',
+     'li_zard',
+     'setup.py']
+
+
 And now for some serious buildout running
 
     >>> os.chdir(os.path.join(tmp, 'aaa'))
@@ -58,3 +75,15 @@ And now for some serious buildout running
     succeeded
 
 
+    >>> os.chdir(os.path.join(tmp, 'li-zard'))
+    >>> print 'start', system('python2.5 bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Creating directory .../li-zard/bin'.
+    ...
+    Generated script .../li-zard/bin/buildout'.
+    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
+    >>> if 'Traceback' in output:
+    ...     print output
+    ... else:
+    ...     print "succeeded"
+    succeeded

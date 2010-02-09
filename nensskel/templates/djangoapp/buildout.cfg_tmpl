@@ -1,0 +1,61 @@
+[buildout]
+unzip = true
+prefer-final = true
+versions = versions
+extensions = buildout.dumppickedversions
+parts =
+    django
+    omelette
+    console_scripts
+    pyflakes
+develop =
+    .
+eggs =
+    ${project}
+
+
+[versions]
+# Specific pins
+${project} =
+# Reported by buildout.dumppickedversions
+
+
+[django]
+# Sets up django for testing our application.
+# See http://jacobian.org/writing/django-apps-with-buildout/
+recipe = djangorecipe
+version = 1.1
+project = ${package}
+projectegg = ${package}
+settings = testsettings
+test = ${package}
+eggs = ${project}
+
+
+[omelette]
+# Creates a nice parts/omelette with our used eggs
+recipe = collective.recipe.omelette
+eggs = \${buildout:eggs}
+
+
+[console_scripts]
+recipe = zc.recipe.egg
+interpreter = python
+eggs =
+    \${buildout:eggs}
+# Development tools
+    eazysvn
+    ipython
+    pep8
+    zest.releaser
+
+
+[pyflakes]
+# Hairy way to install pyflakes: old-style distutils script.
+recipe = zc.recipe.egg
+scripts =
+   pyflakes
+eggs =
+   pyflakes
+entry-points = pyflakes=pkg_resources:run_script
+arguments = 'pyflakes', 'pyflakes'
