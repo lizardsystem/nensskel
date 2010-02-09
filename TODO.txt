@@ -1,0 +1,8 @@
+Todo
+====
+
+- Add readme/todo/license base.
+
+- Add the 3? needed templates.
+
+- Copy usable bits from zestskel/thaskel.
