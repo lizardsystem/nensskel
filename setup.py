@@ -29,6 +29,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
+    tests_require=tests_require,
+    extras_require={'test': tests_require},
     entry_points={
         'console_scripts': [
             ],
