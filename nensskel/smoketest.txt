@@ -27,14 +27,17 @@ Do the smoke tests:
 
     >>> os.chdir(tmp)
     >>> dont_care = system(paster + ' create -t nens_library aaa')
-    >>> pprint(sorted(os.listdir(os.path.join(tmp, 'aaa'))))
+    >>> contents = sorted(os.listdir(os.path.join(tmp, 'aaa')))
+    >>> if 'aaa.egg-info' in contents:
+    ...     # Compensate for distribute/setuptools difference.
+    ...     contents.remove('aaa.egg-info')
+    >>> pprint(contents)
     ['CHANGES.txt',
      'CREDITS.txt',
      'LICENSE.txt',
      'README.txt',
      'TODO.txt',
      'aaa',
-     'aaa.egg-info',
      'bootstrap.py',
      'buildout.cfg',
      'setup.py']
