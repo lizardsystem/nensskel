@@ -58,6 +58,22 @@ Do the smoke tests:
      'li_zard',
      'setup.py']
 
+    >>> dont_care = system(paster + ' create -t nens_lizardsite nieuwegein')
+    >>> contents = sorted(os.listdir(os.path.join(tmp, 'nieuwegein')))
+    >>> if 'nieuwegein.egg-info' in contents:
+    ...     # Compensate for distribute/setuptools difference.
+    ...     contents.remove('nieuwegein.egg-info')
+    >>> pprint(contents)
+    ['CHANGES.txt',
+     'CREDITS.txt',
+     'LICENSE.txt',
+     'README.txt',
+     'TODO.txt',
+     'bootstrap.py',
+     'buildout.cfg',
+     'nieuwegein',
+     'setup.py']
+
 
 And now for some serious buildout running
 
@@ -81,6 +97,20 @@ And now for some serious buildout running
     Creating directory .../li-zard/bin'.
     ...
     Generated script .../li-zard/bin/buildout'.
+    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
+    >>> if 'Traceback' in output:
+    ...     print output
+    ... else:
+    ...     print "succeeded"
+    succeeded
+
+
+    >>> os.chdir(os.path.join(tmp, 'nieuwegein'))
+    >>> print 'start', system('python2.5 bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Creating directory .../nieuwegein/bin'.
+    ...
+    Generated script .../nieuwegein/bin/buildout'.
     >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
     >>> if 'Traceback' in output:
     ...     print output

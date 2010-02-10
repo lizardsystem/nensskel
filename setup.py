@@ -40,5 +40,6 @@ setup(
         'paste.paster_create_template':
         ['nens_library = nensskel.library:Library',
          'nens_djangoapp = nensskel.djangoapp:Djangoapp',
-            ]},
+         'nens_lizardsite = nensskel.lizardsite:Lizardsite',
+         ]},
     )
