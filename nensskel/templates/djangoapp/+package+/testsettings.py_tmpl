@@ -1,3 +1,5 @@
+DEBUG = True
+TEMPLATE_DEBUG = True
 DATABASE_ENGINE = 'sqlite3'
 DATABASE_NAME = 'test.db'
 SITE_ID = 1
