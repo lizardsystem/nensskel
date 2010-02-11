@@ -5,9 +5,14 @@ Changelog for nensskel
 0.1 (unreleased)
 ----------------
 
+- Added lizardsite skeleton (which needs checking and probably modifications).
+
 - Added djangoapp skeleton.
 
 - Added library skeleton.
+
+- Added test that creates instances of all skeletons and runs their
+  bin/buildout.  Smoke test: switch everything on and see if smoke comes out.
 
 - Reinout copied relevant parts from the thaskel and zestskel that he made for
   the two previous companies he worked for.

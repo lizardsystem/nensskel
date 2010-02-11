@@ -1,3 +1,5 @@
+import os
+import uuid
 import sys
 
 from paste.script import templates
@@ -13,7 +15,11 @@ class Lizardsite(templates.Template):
     required_templates = ['nens_djangoapp']
     use_cheetah = True
 
-    def post(self, command, output_dir, vars):
-        # Zap testsettings.py
-        pass
+    def run(self, command, output_dir, vars):
+        vars['secret_key'] = uuid.uuid4()
+        templates.Template.run(self, command, output_dir, vars)
 
+    def post(self, command, output_dir, vars):
+        testsettings = os.path.join(output_dir, vars['package'],
+                                    'testsettings.py')
+        os.remove(testsettings)

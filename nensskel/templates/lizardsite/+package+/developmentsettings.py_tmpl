@@ -1,0 +1,14 @@
+from ${package}.settings import *
+
+DEBUG = True
+
+DATABASE_ENGINE = 'sqlite3'
+# ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+#DATABASE_NAME = 'local${package}'
+
+
+try:
+    from ${package}.localsettings import *
+    # For local dev overrides.
+except ImportError:
+    pass

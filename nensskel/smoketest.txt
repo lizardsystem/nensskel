@@ -73,10 +73,15 @@ Do the smoke tests:
      'TODO.txt',
      'bootstrap.py',
      'buildout.cfg',
+     'deploy.cfg',
      'local_checkouts',
      'nieuwegein',
      'setup.py']
-
+    >>> subdir_contents = sorted(os.listdir(
+    ...     os.path.join(tmp, 'nieuwegein', 'nieuwegein')))
+    >>> settings = [item for item in subdir_contents if 'settings' in item]
+    >>> pprint(settings)
+    ['developmentsettings.py', 'settings.py']
 
 And now for some serious buildout running
 
