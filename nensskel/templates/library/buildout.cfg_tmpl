@@ -1,4 +1,6 @@
 [buildout]
+index = http://lizardpackages.vanrees.org
+# index = http://packages.lizardsystem.nl
 unzip = true
 prefer-final = true
 versions = versions
@@ -8,8 +10,8 @@ parts =
     omelette
     console_scripts
     pyflakes
-develop =
-    .
+develop = .
+#         local_checkouts/some_trunk_external
 eggs =
     ${project}
 

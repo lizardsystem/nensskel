@@ -40,6 +40,7 @@ Do the smoke tests:
      'aaa',
      'bootstrap.py',
      'buildout.cfg',
+     'local_checkouts',
      'setup.py']
 
     >>> dont_care = system(paster + ' create -t nens_djangoapp li-zard')
@@ -56,6 +57,7 @@ Do the smoke tests:
      'bootstrap.py',
      'buildout.cfg',
      'li_zard',
+     'local_checkouts',
      'setup.py']
 
     >>> dont_care = system(paster + ' create -t nens_lizardsite nieuwegein')
@@ -71,6 +73,7 @@ Do the smoke tests:
      'TODO.txt',
      'bootstrap.py',
      'buildout.cfg',
+     'local_checkouts',
      'nieuwegein',
      'setup.py']
 
