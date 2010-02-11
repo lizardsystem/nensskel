@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-0.1 (unreleased)
+0.1 (2010-02-11)
 ----------------
 
 - Added ``nensskel`` script as a handy wrapper around ``paster create``.
