@@ -1,6 +1,10 @@
 Todo
 ====
 
-- Add lizardpackages index url.
+- Lizardsite: add django fastcgi setup.
 
-- Add django fastcgi setup.
+- Lizardsite: add django apache config.
+
+- Lizardsite: add log and www dir.
+
+- Lizardsite: find better way for development tools (off in deployment).

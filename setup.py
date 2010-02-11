@@ -36,10 +36,12 @@ setup(
     extras_require={'test': tests_require},
     entry_points={
         'console_scripts': [
+            'nensskel = nensskel.cmdline:main',
             ],
-        'paste.paster_create_template':
-        ['nens_library = nensskel.library:Library',
-         'nens_djangoapp = nensskel.djangoapp:Djangoapp',
-         'nens_lizardsite = nensskel.lizardsite:Lizardsite',
-         ]},
+        'paste.paster_create_template': [
+            'nens_library = nensskel.library:Library',
+            'nens_djangoapp = nensskel.djangoapp:Djangoapp',
+            'nens_lizardsite = nensskel.lizardsite:Lizardsite',
+            ],
+        },
     )
