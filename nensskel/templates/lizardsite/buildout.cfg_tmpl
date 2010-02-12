@@ -1,6 +1,5 @@
 [buildout]
-index = http://lizardpackages.vanrees.org
-# index = http://packages.lizardsystem.nl
+index = http://packages.lizardsystem.nl
 unzip = true
 prefer-final = true
 versions = versions
