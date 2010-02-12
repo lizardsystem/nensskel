@@ -5,7 +5,7 @@ Changelog for nensskel
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Django fixes after using skeleton in real life.
 
 
 0.1 (2010-02-11)

@@ -87,7 +87,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'lizard.urls'
+ROOT_URLCONF = '${package}.urls'
 
 CACHE_BACKEND = 'locmem:///'
 # Note: for development only, check django website for caching solutions for

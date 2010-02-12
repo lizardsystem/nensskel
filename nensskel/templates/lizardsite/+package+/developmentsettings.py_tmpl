@@ -4,7 +4,11 @@ DEBUG = True
 
 DATABASE_ENGINE = 'sqlite3'
 # ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-#DATABASE_NAME = 'local${package}'
+DATABASE_NAME = 'test.db'
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = '' # empty string for localhost.
+DATABASE_PORT = '' # empty string for default.
 
 
 try:
