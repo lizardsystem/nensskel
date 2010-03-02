@@ -8,3 +8,10 @@ Todo
 - Lizardsite: add log and www dir.
 
 - Lizardsite: find better way for development tools (off in deployment).
+
+- Lizardsite: use mkdir recipe to add var/media dir
+
+- Lizardsite: add var/media dir hosting to apache config.
+
+- Lizardsite: figure out ADMIN_MEDIA_PREFIX. Probably use django-staticmedia's
+  STATIC_MEDIA/admin instead.

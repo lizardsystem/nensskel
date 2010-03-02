@@ -15,6 +15,11 @@ import os
 # instead of hardcoded to c:\only\on\my\computer.
 SETTINGS_DIR = os.path.dirname(os.path.realpath(__file__))
 
+# BUILDOUT_DIR is for access to the "surrounding" buildout, for instance for
+# BUILDOUT_DIR/var/media files to give django-staticfiles a proper place
+# to place all collected static files.
+BUILDOUT_DIR = os.path.abspath(os.path.join(SETTINGS_DIR, '..'))
+
 # Production, so DEBUG is False. developmentsettings.py sets it to True.
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -60,15 +65,16 @@ USE_I18N = True
 # TODO IN NENSSKEL: Figure out good defaults for media, probably with
 # http://pypi.python.org/pypi/django-staticfiles behind it.
 # Absolute path to the directory that holds media.
-MEDIA_ROOT = os.path.join(SETTINGS_DIR, 'media')
+MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/static_media/'
+MEDIA_URL = ''
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
+# TODO: probably use django-staticmedia's STATIC_MEDIA/admin instead
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 # Make this unique, and don't share it with anybody.
@@ -112,6 +118,23 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
-    #'django.contrib.databrowse',
+    'staticfiles',
     '${package}',
 )
+
+# This way you can use {{ STATIC_URL }}/${package}/my.css
+TEMPLATE_CONTEXT_PROCESSORS = (
+    # Django default ones:
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    # Extra one to handle static files:
+    'staticfiles.context_processors.static_url',
+    )
+
+# URL that handles the files served by django-staticfiles
+STATIC_URL = '/site-media/'
+
+# Location for "bin/django build_static" to place the collected static media.
+STATIC_ROOT = os.path.join(BUILDOUT_DIR, 'var', 'media')
