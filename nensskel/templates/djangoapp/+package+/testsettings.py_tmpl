@@ -13,3 +13,9 @@ INSTALLED_APPS = [
     '${package}']
 ROOT_URLCONF = '${package}.urls'
 MEDIA_URL = '/static_media/'
+
+try:
+    # Import local settings that aren't stored in svn.
+    from ${package}.local_testsettings import *
+except ImportError:
+    pass
