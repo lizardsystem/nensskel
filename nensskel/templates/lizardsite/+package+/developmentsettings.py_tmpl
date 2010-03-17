@@ -4,7 +4,7 @@ DEBUG = True
 
 DATABASE_ENGINE = 'sqlite3'
 # ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'test.db'
+DATABASE_NAME = os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db')
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
 DATABASE_HOST = '' # empty string for localhost.

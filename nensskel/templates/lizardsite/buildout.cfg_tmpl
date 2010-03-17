@@ -5,10 +5,12 @@ prefer-final = true
 versions = versions
 extensions = buildout.dumppickedversions
 parts =
+    mkdir
     django
     omelette
     console_scripts
     pyflakes
+    apacheconf
 develop = .
 #         local_checkouts/some_trunk_external
 eggs =
@@ -21,11 +23,22 @@ ${project} =
 # Reported by buildout.dumppickedversions
 
 
+[mkdir]
+recipe = z3c.recipe.mkdir
+paths =
+    \${buildout:directory}/var/static
+    \${buildout:directory}/var/media
+    \${buildout:directory}/var/log
+    \${buildout:directory}/var/sqlite
+
+
 [django]
 # Sets up django for testing our application.
 # See http://jacobian.org/writing/django-apps-with-buildout/
 recipe = djangorecipe
 version = 1.1
+wsgi = true
+wsgilog = \${buildout:directory}/var/log/django.log
 project = ${package}
 projectegg = ${package}
 settings = developmentsettings
@@ -60,3 +73,9 @@ eggs =
    pyflakes
 entry-points = pyflakes=pkg_resources:run_script
 arguments = 'pyflakes', 'pyflakes'
+
+
+[apacheconf]
+recipe = collective.recipe.template
+input = \${buildout:directory}/etc/${project}.apache.conf.in
+output = \${buildout:directory}/etc/${project}.apache.conf

@@ -20,6 +20,11 @@ SETTINGS_DIR = os.path.dirname(os.path.realpath(__file__))
 # to place all collected static files.
 BUILDOUT_DIR = os.path.abspath(os.path.join(SETTINGS_DIR, '..'))
 
+# Triple blast.  Needed to get matplotlib from barfing on the server: it needs
+# to be able to write to some directory.
+if 'MPLCONFIGDIR' not in os.environ:
+    os.environ['MPLCONFIGDIR'] = tempfile.gettempdir()
+
 # Production, so DEBUG is False. developmentsettings.py sets it to True.
 DEBUG = False
 # Show template debug information for faulty templates.  Only used when DEBUG
@@ -35,6 +40,7 @@ MANAGERS = ADMINS
 # TODO: Switch this to the real production database.
 DATABASE_ENGINE = 'sqlite3'
 # ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+#DATABASE_NAME = os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db')
 DATABASE_NAME = '${package}'
 DATABASE_USER = '${package}'
 DATABASE_PASSWORD = '${package}'
@@ -105,6 +111,8 @@ CACHE_BACKEND = 'locmem:///'
 # ^^^ TODO
 
 INSTALLED_APPS = (
+    '${package}',
+    'staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -113,6 +121,4 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'staticfiles',
-    '${package}',
 )
