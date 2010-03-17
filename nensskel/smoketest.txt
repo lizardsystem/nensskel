@@ -74,6 +74,7 @@ Do the smoke tests:
      'bootstrap.py',
      'buildout.cfg',
      'deploy.cfg',
+     'etc',
      'local_checkouts',
      'nieuwegein',
      'setup.py']
