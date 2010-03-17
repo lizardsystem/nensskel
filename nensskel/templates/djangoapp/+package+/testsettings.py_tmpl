@@ -4,13 +4,14 @@ DATABASE_ENGINE = 'sqlite3'
 DATABASE_NAME = 'test.db'
 SITE_ID = 1
 INSTALLED_APPS = [
+    '${package}',
+    'staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'staticfiles',
-    '${package}']
+    ]
 ROOT_URLCONF = '${package}.urls'
 
 # Used for django-staticfiles
