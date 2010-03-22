@@ -8,6 +8,9 @@ Changelog for nensskel
 - Django STATIC_URL/MEDIA_URL clarification and usage improvement after
   discussion on http://bitbucket.org/jezdez/django-staticfiles/issue/12/
 
+- Added apache config (with a separate one for windows that still needs some
+  work).
+
 
 0.2 (2010-02-12)
 ----------------
