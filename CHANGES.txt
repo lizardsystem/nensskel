@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-0.3 (unreleased)
+0.3 (2010-03-22)
 ----------------
 
 - Django STATIC_URL/MEDIA_URL clarification and usage improvement after
