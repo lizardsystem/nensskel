@@ -1,13 +1,12 @@
+# TODO: fix this so that it runs on windows!!!
+
 # Apache modules that need to be enabled:
-# mod_wsgi (ubuntu: just install libapache2-mod-wsgi)
+# mod_wsgi (probably needs to be installed first)
+# mod_alias
 
 <VirtualHost *:80>
   ServerName ${project}.lizardsystem.nl
   # ^^^ TODO: figure out real name
-
-  WSGIProcessGroup ${project}
-  WSGIDaemonProcess ${project} threads=10 maximum-requests=10000 user=buildout group=buildout
-  # ^^^ Settings for use on the buildbot machine.  Might need to be changed.
 
   <Location />
     Order deny,allow
@@ -35,6 +34,6 @@
   # django-staticfiles: STATIC_URL = '/static_media/'
   Alias /static_media/ \${buildout:directory}/var/static/
   # Django is run via WSGI.
-  WSGIScriptAlias / \${buildout:directory}/bin/django.wsgi
+  WSGIScriptAlias / \${buildout:directory}/bin/django.wsgi-script.py
 
 </VirtualHost>

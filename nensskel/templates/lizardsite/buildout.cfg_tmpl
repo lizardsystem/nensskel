@@ -11,6 +11,7 @@ parts =
     console_scripts
     pyflakes
     apacheconf
+    apachewindowsconf
 develop = .
 #         local_checkouts/some_trunk_external
 eggs =
@@ -79,3 +80,9 @@ arguments = 'pyflakes', 'pyflakes'
 recipe = collective.recipe.template
 input = \${buildout:directory}/etc/${project}.apache.conf.in
 output = \${buildout:directory}/etc/${project}.apache.conf
+
+
+[apachewindowsconf]
+recipe = collective.recipe.template
+input = \${buildout:directory}/etc/${project}.apache.windows.conf.in
+output = \${buildout:directory}/etc/${project}.apache.windows.conf
