@@ -46,7 +46,6 @@ eggs =
     \${buildout:eggs}
 # Development tools
     eazysvn
-    ipython
     pep8
     zest.releaser
 
