@@ -5,7 +5,8 @@ Changelog for nensskel
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Removed ipython as it regularly fails to download, sadly.  Can be re-added
+  after buildout gained a timeout setting (in the .cfg files).
 
 
 0.3 (2010-03-22)
