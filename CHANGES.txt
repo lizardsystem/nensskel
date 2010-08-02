@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-0.5 (unreleased)
+0.5 (2010-08-02)
 ----------------
 
 - Added django compressor settings to the lizardsite template.
