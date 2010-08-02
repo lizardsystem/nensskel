@@ -5,14 +5,16 @@ Changelog for nensskel
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added django compressor settings to the lizardsite template.
+
+- Added lizard-ui as a standard dependency for django applications.
 
 
 0.4 (2010-05-20)
 ----------------
 
 - Removed ipython as it regularly fails to download, sadly.  Can be re-added
-  after buildout gained a timeout setting (in the .cfg files).
+  after buildout gains a timeout setting (in the .cfg files).
 
 
 0.3 (2010-03-22)

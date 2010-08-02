@@ -12,6 +12,10 @@
 import os
 import tempfile
 
+# Set matplotlib defaults.
+# Uncomment this when using lizard-map.
+# import lizard_map.matplotlib_settings
+
 # SETTINGS_DIR allows media paths and so to be relative to this settings file
 # instead of hardcoded to c:\only\on\my\computer.
 SETTINGS_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -89,6 +93,15 @@ STATIC_URL = '/static_media/'
 # admin's static media into STATIC_ROOT/admin.
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
+# Storage engine to be used during compression
+COMPRESS_STORAGE = "staticfiles.storage.StaticFileStorage"
+# The URL that linked media will be read from and compressed media will be
+# written to.
+COMPRESS_URL = STATIC_URL
+# The absolute file path that linked media will be read from and compressed
+# media will be written to.
+COMPRESS_ROOT = STATIC_ROOT
+
 # django-staticfiles needs an extra context processor to allow you to use {{
 # STATIC_URL }}myapp/my.css in your templates.
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -113,6 +126,8 @@ CACHE_BACKEND = 'locmem:///'
 
 INSTALLED_APPS = (
     '${package}',
+    'lizard_ui',
+    'compressor',
     'staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
