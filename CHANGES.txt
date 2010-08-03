@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-0.6 (unreleased)
+1.0 (2010-08-03)
 ----------------
 
 - Added coverage support both to nensskel itself and to the templates.
