@@ -119,6 +119,11 @@ SECRET_KEY = '${secret_key}'
 
 ROOT_URLCONF = '${package}.urls'
 
+# Test settings for hudson integration.
+TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.run_tests'
+TEST_OUTPUT_DESCRIPTIONS = True
+TEST_OUTPUT_DIR = 'xmlrunner'
+
 CACHE_BACKEND = 'locmem:///'
 # Note: for development only, check django website for caching solutions for
 # production environments
