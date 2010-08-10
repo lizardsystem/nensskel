@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.1 (unreleased)
+1.1 (2010-08-10)
 ----------------
 
 - Changed test setup of djangoapp and lizardsite to match Reinout's latest
