@@ -23,7 +23,7 @@ setup(
     version=version,
     author='Reinout van Rees',
     author_email='reinout.vanrees@nelen-schuurmans.nl',
-    url='',
+    url='http://pypi.python.org/pypi/nensskel',
     download_url='',
     description='Skeleton for Nelen & Schuurmans projects',
     long_description=long_description,
