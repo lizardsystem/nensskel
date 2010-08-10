@@ -1,17 +1,5 @@
 Todo
 ====
 
-- Lizardsite: add django fastcgi setup.
-
-- Lizardsite: add django apache config.
-
-- Lizardsite: add log and www dir.
-
-- Lizardsite: find better way for development tools (off in deployment).
-
-- Lizardsite: use mkdir recipe to add var/media dir
-
-- Lizardsite: add var/media dir hosting to apache config.
-
-- Lizardsite: figure out ADMIN_MEDIA_PREFIX. Probably use django-staticmedia's
-  STATIC_MEDIA/admin instead.
+- Add example doctest setup after I figured out how to get doctests running
+  again with this django+nose+djangorecipe combination.
