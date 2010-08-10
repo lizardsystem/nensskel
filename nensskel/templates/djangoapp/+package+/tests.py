@@ -1,16 +1,11 @@
-import doctest
+from django.test import TestCase
 
 
-def suite():
-    """Return test suite
+# Import all your .py files here
 
-    This method is automatically called by django's test mechanism.
 
-    """
-    return doctest.DocFileSuite(
-        'USAGE.txt',
-        #'TODO_several_more_tests.txt',
-        module_relative=True,
-        optionflags=(doctest.NORMALIZE_WHITESPACE|
-                     doctest.ELLIPSIS|
-                     doctest.REPORT_NDIFF))
+
+class ExampleTest(TestCase):
+
+    def test_something(self):
+        self.assertEquals(1, 1)

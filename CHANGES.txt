@@ -5,7 +5,8 @@ Changelog for nensskel
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Changed test setup of djangoapp and lizardsite to match Reinout's latest
+  experiments :-)
 
 
 1.0 (2010-08-03)

@@ -5,7 +5,9 @@ DATABASE_NAME = 'test.db'
 SITE_ID = 1
 INSTALLED_APPS = [
     '${package}',
+    'lizard_ui',
     'staticfiles',
+    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -14,9 +16,7 @@ INSTALLED_APPS = [
     ]
 ROOT_URLCONF = '${package}.urls'
 
-TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.run_tests'
-TEST_OUTPUT_DESCRIPTIONS = True
-TEST_OUTPUT_DIR = 'xmlrunner'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 # Used for django-staticfiles
 STATIC_URL = '/static_media/'
