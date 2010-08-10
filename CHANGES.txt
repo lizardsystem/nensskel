@@ -2,8 +2,8 @@ Changelog for nensskel
 ======================
 
 
-1.2 (unreleased)
-----------------
+1.1.1 (2010-08-10)
+------------------
 
 - Documentation update.
 
