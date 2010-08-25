@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.2 (unreleased)
+1.2 (2010-08-25)
 ----------------
 
 - Bootstrap.py adjustments: using the 1.4.x buildout one for now.
