@@ -1,3 +1,4 @@
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
 """Command line script as simpler wrapper around paster"""
 
 import sys

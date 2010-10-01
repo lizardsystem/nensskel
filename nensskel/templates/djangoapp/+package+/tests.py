@@ -1,7 +1,6 @@
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
+
 from django.test import TestCase
-
-
-# Import all your .py files here
 
 
 class ExampleTest(TestCase):

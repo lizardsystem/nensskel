@@ -5,7 +5,9 @@ Changelog for nensskel
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added copyright notice at the top of every file including pointer to the
+  LICENSE.txt GPL file.  No, I'm not copy/pasting 10 unneeded lines of GPL
+  boilerplate into every file.
 
 
 1.2 (2010-08-25)
