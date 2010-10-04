@@ -87,7 +87,7 @@ Do the smoke tests:
 And now for some serious buildout running
 
     >>> os.chdir(os.path.join(tmp, 'aaa'))
-    >>> print 'start', system('python2.5 bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../aaa/bin'.
     ...
@@ -101,7 +101,7 @@ And now for some serious buildout running
 
 
     >>> os.chdir(os.path.join(tmp, 'li-zard'))
-    >>> print 'start', system('python2.5 bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../li-zard/bin'.
     ...
@@ -115,7 +115,7 @@ And now for some serious buildout running
 
 
     >>> os.chdir(os.path.join(tmp, 'nieuwegein'))
-    >>> print 'start', system('python2.5 bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../nieuwegein/bin'.
     ...
