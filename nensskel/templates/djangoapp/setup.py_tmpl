@@ -14,7 +14,6 @@ install_requires = [
     'django-staticfiles',
     'lizard-ui',
     'django-nose',
-    'nosexcover',
     ],
 
 tests_require = [
