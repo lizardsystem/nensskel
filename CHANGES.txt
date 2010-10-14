@@ -5,6 +5,9 @@ Changelog for nensskel
 1.4 (unreleased)
 ----------------
 
+- Added setup.cfg that tells nose to output xml test reports for use with
+  Hudson.
+
 - Fixes to the test setup of django_app.
 
 
