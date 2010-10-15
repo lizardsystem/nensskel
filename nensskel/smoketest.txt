@@ -41,6 +41,7 @@ Do the smoke tests:
      'bootstrap.py',
      'buildout.cfg',
      'local_checkouts',
+     'setup.cfg',
      'setup.py']
 
     >>> dont_care = system(paster + ' create -t nens_djangoapp li-zard')
@@ -58,6 +59,7 @@ Do the smoke tests:
      'buildout.cfg',
      'li_zard',
      'local_checkouts',
+     'setup.cfg',
      'setup.py']
 
     >>> dont_care = system(paster + ' create -t nens_lizardsite nieuwegein')
@@ -77,6 +79,7 @@ Do the smoke tests:
      'etc',
      'local_checkouts',
      'nieuwegein',
+     'setup.cfg',
      'setup.py']
     >>> subdir_contents = sorted(os.listdir(
     ...     os.path.join(tmp, 'nieuwegein', 'nieuwegein')))
