@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.4 (unreleased)
+1.4 (2010-10-15)
 ----------------
 
 - Added setup.cfg that tells nose to output xml test reports for use with
