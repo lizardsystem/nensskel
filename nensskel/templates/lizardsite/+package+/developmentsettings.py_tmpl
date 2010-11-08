@@ -2,13 +2,19 @@ from ${package}.settings import *
 
 DEBUG = True
 
-DATABASE_ENGINE = 'sqlite3'
-# ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db')
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = '' # empty string for localhost.
-DATABASE_PORT = '' # empty string for default.
+# ENGINE: 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+# In case of geodatabase, prepend with:
+  django.contrib.gis.db.backends.(postgis)
+DATABASES = {
+    'default': {
+        'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
+        'ENGINE': 'sqlite3',  #'django.contrib.gis.db.backends.postgis',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',  # empty string for localhost.
+        'PORT': '',  # empty string for default.
+        }
+    }
 
 
 try:

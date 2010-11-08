@@ -43,14 +43,20 @@ ADMINS = (
 MANAGERS = ADMINS
 
 # TODO: Switch this to the real production database.
-DATABASE_ENGINE = 'sqlite3'
 # ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-#DATABASE_NAME = os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db')
-DATABASE_NAME = '${package}'
-DATABASE_USER = '${package}'
-DATABASE_PASSWORD = '${package}'
-DATABASE_HOST = '' # empty string for localhost.
-DATABASE_PORT = '' # empty string for default.
+# In case of geodatabase, prepend with:
+  django.contrib.gis.db.backends.(postgis)
+DATABASES = {
+    'default': {
+        # 'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
+        'NAME': '${package}',
+        'ENGINE': 'sqlite3',  #'django.contrib.gis.db.backends.postgis',
+        'USER': '${package}',
+        'PASSWORD': '${package}',
+        'HOST': '',  # empty string for localhost.
+        'PORT': '',  # empty string for default.
+        }
+    }
 
 # Almost always set to 1.  Django allows multiple sites in one database.
 SITE_ID = 1
