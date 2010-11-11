@@ -3,6 +3,7 @@
 
 <VirtualHost *:80>
   ServerName ${project}.lizardsystem.nl
+  ServerAlias test.${project}.lizardsystem.nl
   # ^^^ TODO: figure out real name
 
   WSGIProcessGroup ${project}
