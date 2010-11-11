@@ -5,7 +5,13 @@ Changelog for nensskel
 1.5 (unreleased)
 ----------------
 
-- Update database settings to new django multiple databases style.
+- Added openlayers img/ and theme/ aliases to compensate for openlayers'
+  weirdness.
+
+- Added extra part to the lizardsite buildout for automatic ``bin/django
+  build_static`` running so we won't ever forget to do that.
+
+- Updated database settings to new django multiple databases style.
 
 
 1.4 (2010-10-15)
