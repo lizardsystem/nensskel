@@ -5,6 +5,8 @@ Changelog for nensskel
 1.5 (unreleased)
 ----------------
 
+- Added 500.html and 404.html to lizardsite template.
+
 - Added openlayers img/ and theme/ aliases to compensate for openlayers'
   weirdness.
 
