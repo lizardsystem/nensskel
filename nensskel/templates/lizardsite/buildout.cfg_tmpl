@@ -13,6 +13,7 @@ parts =
     pyflakes
     apacheconf
     apachewindowsconf
+    build_static
 develop = .
 #         local_checkouts/some_trunk_external
 eggs =
@@ -87,3 +88,10 @@ output = \${buildout:directory}/etc/${project}.apache.conf
 recipe = collective.recipe.template
 input = \${buildout:directory}/etc/${project}.apache.windows.conf.in
 output = \${buildout:directory}/etc/${project}.apache.windows.conf
+
+
+[build_static]
+recipe = iw.recipe.cmd
+on_install = true
+on_update = true
+cmds = ${buildout:bin-directory}/django build_static --noinput
