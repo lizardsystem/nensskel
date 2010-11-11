@@ -34,6 +34,10 @@
   Alias /media/ \${buildout:directory}/var/media/
   # django-staticfiles: STATIC_URL = '/static_media/'
   Alias /static_media/ \${buildout:directory}/var/static/
+  # Weird aliases for openlayers.
+  AliasMatch /.*/theme/default/(.*)$ ${buildout:directory}/var/static/openlayers/theme/default/$1
+  AliasMatch /.*/img/(.*)$ ${buildout:directory}/var/static/openlayers/img/$1
+
   # Django is run via WSGI.
   WSGIScriptAlias / \${buildout:directory}/bin/django.wsgi
 
