@@ -5,7 +5,8 @@ Changelog for nensskel
 1.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed too-restrictive regex in apache's openlayers AliasMatch: the
+  openlayers css/icons now also work in the root of the site...
 
 
 1.6 (2010-12-03)
