@@ -5,7 +5,7 @@ Changelog for nensskel
 1.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added sysegg part to the buildouts.
 
 
 1.5 (2010-12-03)
