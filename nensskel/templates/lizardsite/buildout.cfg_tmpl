@@ -94,4 +94,4 @@ output = \${buildout:directory}/etc/${project}.apache.windows.conf
 recipe = iw.recipe.cmd
 on_install = true
 on_update = true
-cmds = ${buildout:bin-directory}/django build_static --noinput
+cmds = \${buildout:bin-directory}/django build_static --noinput
