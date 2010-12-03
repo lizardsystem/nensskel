@@ -10,6 +10,7 @@
 #
 
 import os
+import logging
 import tempfile
 
 # Set matplotlib defaults.
@@ -44,8 +45,7 @@ MANAGERS = ADMINS
 
 # TODO: Switch this to the real production database.
 # ^^^ 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-# In case of geodatabase, prepend with:
-  django.contrib.gis.db.backends.(postgis)
+# In case of geodatabase, prepend with: django.contrib.gis.db.backends.(postgis)
 DATABASES = {
     'default': {
         # 'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
@@ -73,7 +73,7 @@ LANGUAGE_CODE = 'nl-NL'
 # For at-runtime language switching.  Note: they're shown in reverse order in
 # the interface!
 LANGUAGES = (
-    ('en', 'English'),
+#    ('en', 'English'),
     ('nl', 'Nederlands'),
 )
 # If you set this to False, Django will make some optimizations so as not to
@@ -116,6 +116,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
+    # Add request to your context (useful for custom tags).
+    'django.core.context_processors.request',
     # Extra for django-staticfiles.
     'staticfiles.context_processors.static_url',
     )
@@ -132,6 +134,19 @@ CACHE_BACKEND = 'locmem:///'
 # production environments
 # ^^^ TODO
 
+MIDDLEWARE_CLASSES = (
+    # Gzip needs to be at the top.
+    'django.middleware.gzip.GZipMiddleware',
+    # Tracebacks are logged to var/log/django.log by this:
+    'lizard_ui.middleware.TracebackLoggingMiddleware',
+    # Below is the default list, don't modify it.
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+)
+
 INSTALLED_APPS = (
     '${package}',
     'lizard_ui',
@@ -140,9 +155,36 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    # 'django.contrib.gis',
+    'django.contrib.gis',
     # 'django.contrib.gis.db',
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
+MAP_SETTINGS = {
+    'base_layer_type': 'OSM',  # OSM or WMS
+    'projection': 'EPSG:900913',  # EPSG:900913, EPSG:28992
+    'display_projection': 'EPSG:4326',  # EPSG:900913/28992/4326
+    'startlocation_x': '610000',
+    'startlocation_y': '6830000',
+    'startlocation_zoom': '8',
+    'base_layer_osm': (
+        'http://tile.openstreetmap.nl/tiles/\${z}/\${x}/\${y}.png'),
+    }
+
+# File logging for production.  If logging is already defined (for instance in
+# developmentsettings.py, this won't have any effect.
+logging.basicConfig(
+    level=logging.WARN,
+    format = ('=' * 78 + '\n' +
+              '%(asctime)s %(name)s %(levelname)s\n%(message)s'),
+    filename=os.path.join(BUILDOUT_DIR, 'var', 'log', 'django.log'),
+    filemode='a')
+
+
+try:
+    from ${package}.localproductionsettings import *
+    # For local production overrides (DB passwords, for instance)
+except ImportError:
+    pass

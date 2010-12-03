@@ -5,6 +5,8 @@ import sys
 
 from paste.script import templates
 
+from nensskel import utils
+
 # Bloody hack for cheetah
 reload(sys)
 sys.setdefaultencoding('UTF-8')
@@ -24,3 +26,4 @@ class Lizardsite(templates.Template):
         testsettings = os.path.join(output_dir, vars['package'],
                                     'testsettings.py')
         os.remove(testsettings)
+        utils.print_egginfo_removal_instructions(output_dir, vars)

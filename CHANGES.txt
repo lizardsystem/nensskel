@@ -5,6 +5,24 @@ Changelog for nensskel
 1.5 (unreleased)
 ----------------
 
+- Printing .egginfo directory removal instructions.
+
+- Updated list of standard svn:ignores.
+
+- Added django gzip middleware to the lizardsite template.
+
+- Added lizard-ui's traceback logging middleware to lizardsite.
+
+- Added lizard-map's map settings to the django settings.py in lizardsite.
+
+- Removed windows apache configuration.
+
+- Added gzip ("mod_deflate") for js/css in the apache config.
+
+- Eternally caching the django-compressor combined js/css files.
+
+- Added logging setup to lizardsite.
+
 - Added 500.html and 404.html to lizardsite template.
 
 - Added openlayers img/ and theme/ aliases to compensate for openlayers'

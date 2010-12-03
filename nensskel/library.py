@@ -34,11 +34,16 @@ class Library(templates.Template):
         """Clean up the result"""
         egginfo_dirname = '%(package)s.egg-info' % vars
         utils.svn_propset(output_dir,
-                          ['bin',
-                           'develop-eggs',
+                          ['.coverage',
+                           '.installed.cfg',
+                           'bin',
                            'coverage',
-                           'parts',
+                           'coverage.xml',
+                           'develop-eggs',
                            'eggs',
-                           egginfo_dirname,
+                           'htmlcov',
+                           'nosetests.xml',
+                           'parts',
                            'var',
-                           '.installed.cfg'])
+                           egginfo_dirname])
+        utils.print_egginfo_removal_instructions(output_dir, vars)
