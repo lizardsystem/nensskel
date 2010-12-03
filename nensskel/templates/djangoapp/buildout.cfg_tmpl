@@ -27,10 +27,10 @@ ${project} =
 recipe = osc.recipe.sysegg
 force-sysegg = true
 eggs =
+    psycopg2
 #    PIL
 #    matplotlib
 #    pyproj
-#    psycopg2
 
 
 [django]

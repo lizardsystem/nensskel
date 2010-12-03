@@ -6,7 +6,7 @@ prefer-final = true
 versions = versions
 extensions = buildout.dumppickedversions
 parts =
-    sysegg
+#    sysegg
     test
     omelette
     console_scripts
@@ -23,14 +23,11 @@ ${project} =
 # Reported by buildout.dumppickedversions
 
 
-[sysegg]
-# Add eggs here that are best handled through OS-level packages.
-recipe = osc.recipe.sysegg
-force-sysegg = true
-eggs =
-#    PIL
-#    matplotlib
-#    pyproj
+# [sysegg]
+# # Add eggs here that are best handled through OS-level packages.
+# recipe = osc.recipe.sysegg
+# force-sysegg = true
+# eggs =
 
 
 [test]
