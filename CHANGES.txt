@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.7 (unreleased)
+1.7 (2011-01-19)
 ----------------
 
 - Added sphinx setup.  Also swapped the .txt files for .rst ones.
