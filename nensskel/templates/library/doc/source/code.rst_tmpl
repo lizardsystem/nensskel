@@ -1,0 +1,6 @@
+Code documentation
+==================
+
+.. automodule:: ${package}.something
+   :members:
+

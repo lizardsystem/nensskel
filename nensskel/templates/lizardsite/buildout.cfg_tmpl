@@ -14,6 +14,7 @@ parts =
     pyflakes
     apacheconf
     build_static
+    sphinx
 develop = .
 #         local_checkouts/some_trunk_external
 eggs =
@@ -101,3 +102,10 @@ recipe = iw.recipe.cmd
 on_install = true
 on_update = true
 cmds = \${buildout:bin-directory}/django build_static --noinput
+
+
+[sphinx]
+recipe = collective.recipe.sphinxbuilder
+source = \${buildout:directory}/doc/source
+build = \${buildout:directory}/doc/build
+eggs = \${buildout:eggs}

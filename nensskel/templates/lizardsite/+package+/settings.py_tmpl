@@ -155,7 +155,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.gis',
+    #'django.contrib.gis',
     # 'django.contrib.gis.db',
     'django.contrib.markup',
     'django.contrib.sessions',

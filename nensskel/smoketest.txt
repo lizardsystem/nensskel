@@ -32,14 +32,15 @@ Do the smoke tests:
     ...     # Compensate for distribute/setuptools difference.
     ...     contents.remove('aaa.egg-info')
     >>> pprint(contents)
-    ['CHANGES.txt',
-     'CREDITS.txt',
-     'LICENSE.txt',
-     'README.txt',
-     'TODO.txt',
+    ['CHANGES.rst',
+     'CREDITS.rst',
+     'LICENSE.rst',
+     'README.rst',
+     'TODO.rst',
      'aaa',
      'bootstrap.py',
      'buildout.cfg',
+     'doc',
      'local_checkouts',
      'setup.cfg',
      'setup.py']
@@ -50,13 +51,14 @@ Do the smoke tests:
     ...     # Compensate for distribute/setuptools difference.
     ...     contents.remove('li_zard.egg-info')
     >>> pprint(contents)
-    ['CHANGES.txt',
-     'CREDITS.txt',
-     'LICENSE.txt',
-     'README.txt',
-     'TODO.txt',
+    ['CHANGES.rst',
+     'CREDITS.rst',
+     'LICENSE.rst',
+     'README.rst',
+     'TODO.rst',
      'bootstrap.py',
      'buildout.cfg',
+     'doc',
      'li_zard',
      'local_checkouts',
      'setup.cfg',
@@ -68,14 +70,15 @@ Do the smoke tests:
     ...     # Compensate for distribute/setuptools difference.
     ...     contents.remove('nieuwegein.egg-info')
     >>> pprint(contents)
-    ['CHANGES.txt',
-     'CREDITS.txt',
-     'LICENSE.txt',
-     'README.txt',
-     'TODO.txt',
+    ['CHANGES.rst',
+     'CREDITS.rst',
+     'LICENSE.rst',
+     'README.rst',
+     'TODO.rst',
      'bootstrap.py',
      'buildout.cfg',
      'deploy.cfg',
+     'doc',
      'etc',
      'local_checkouts',
      'nieuwegein',
