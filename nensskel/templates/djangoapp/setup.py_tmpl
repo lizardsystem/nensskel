@@ -14,6 +14,7 @@ install_requires = [
     'django-staticfiles',
     'lizard-ui',
     'django-nose',
+    'pkginfo',
     ],
 
 tests_require = [
