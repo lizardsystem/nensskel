@@ -15,6 +15,9 @@ import tempfile
 
 # Set matplotlib defaults.
 # Uncomment this when using lizard-map.
+# import matplotlib
+# # Force matplotlib to not use any Xwindows backend.
+# matplotlib.use('Agg')
 # import lizard_map.matplotlib_settings
 
 # SETTINGS_DIR allows media paths and so to be relative to this settings file

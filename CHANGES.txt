@@ -5,6 +5,11 @@ Changelog for nensskel
 1.8 (unreleased)
 ----------------
 
+- Removed buildout usage part from the readme.rst as it gets repeated
+  lots of times all over the place this way.
+
+- Added matplotlib tweaks to the django site settings.py.
+
 - Added django-extensions to the standard dependencies of django apps
   so that we can get a model graph.
 
