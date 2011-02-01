@@ -48,8 +48,7 @@ MANAGERS = ADMINS
 # In case of geodatabase, prepend with: django.contrib.gis.db.backends.(postgis)
 DATABASES = {
     'default': {
-        # 'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
-        'NAME': '${package}',
+        'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
         'ENGINE': 'sqlite3',  #'django.contrib.gis.db.backends.postgis',
         'USER': '${package}',
         'PASSWORD': '${package}',
