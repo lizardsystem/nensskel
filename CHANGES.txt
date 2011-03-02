@@ -5,7 +5,7 @@ Changelog for nensskel
 1.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Small restructured text heading level fixes for the sphinx documentation.
 
 
 1.8 (2011-02-01)

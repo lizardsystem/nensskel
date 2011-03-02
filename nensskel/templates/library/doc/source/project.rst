@@ -1,5 +1,5 @@
 Project documentation
-=====================
+#####################
 
 .. include:: ../../CHANGES.rst
 

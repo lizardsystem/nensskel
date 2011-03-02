@@ -1,10 +1,10 @@
 Overview
-========
+########
 
 TODO: Short one-paragraph intro.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    project
    code
