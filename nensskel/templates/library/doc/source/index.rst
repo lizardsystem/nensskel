@@ -6,8 +6,8 @@ TODO: Short one-paragraph intro.
 .. toctree::
    :maxdepth: 2
 
-   project
    code
+   project
 
 
 .. include:: ../../README.rst
