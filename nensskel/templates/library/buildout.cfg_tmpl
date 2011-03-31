@@ -21,6 +21,7 @@ eggs =
 [versions]
 # Specific pins
 ${project} =
+
 # Reported by buildout.dumppickedversions
 
 
@@ -33,15 +34,8 @@ ${project} =
 
 [test]
 recipe = pbp.recipe.noserunner
-eggs =
-    ${project}
-    ${project}[test]
-defaults =
-    --with-doctest
-    --doctest-extension txt
-    --doctest-fixtures _fixt
-    --with-xunit
-    ${project}
+eggs = ${project}
+defaults = ${project}
 
 
 [omelette]

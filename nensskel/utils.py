@@ -14,12 +14,16 @@ def svn_propset(directory, ignores, setting='svn:ignore'):
     subprocess.call(['svn', 'propset', setting, to_ignore, directory])
 
 
-def print_egginfo_removal_instructions(output_dir, vars):
+def print_egginfo_removal_instructions(output_dir, vars, extra_reverts=None):
     """Print egg-info removal instructions."""
+    if extra_reverts is None:
+        extra_reverts = []
     egginfo_dirname = '%(package)s.egg-info' % vars
     print
     print "Manual task that you need to do:"
     print "cd %s" % output_dir
     print "svn revert %s" % egginfo_dirname
+    for extra_revert in extra_reverts:
+        print "svn revert %s" % extra_revert
     print "rm -rf %s" % egginfo_dirname
     print

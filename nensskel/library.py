@@ -1,4 +1,5 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
+import os
 import sys
 
 from paste.script import templates
@@ -46,4 +47,6 @@ class Library(templates.Template):
                            'parts',
                            'var',
                            egginfo_dirname])
+        sphinx_dir = os.path.join(output_dir, 'doc')
+        utils.svn_propset(sphinx_dir, ['build'])
         utils.print_egginfo_removal_instructions(output_dir, vars)

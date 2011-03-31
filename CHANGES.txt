@@ -5,7 +5,14 @@ Changelog for nensskel
 1.10 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Adding mostly-empty READMEs to the two empty 'fixtures' and
+  'media/+package+' dirs in the django app template. On some machines, the
+  empty directories were not getting created. This way they are.
+
+- Svn-ignoring the ``doc/build`` directory (with sphinx output).
+
+- Added ``svn revert`` instructions for ``testsettings.py`` in the website
+  template (in addition to removing the file).
 
 
 1.9 (2011-03-02)

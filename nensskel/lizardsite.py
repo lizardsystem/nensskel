@@ -26,4 +26,9 @@ class Lizardsite(templates.Template):
         testsettings = os.path.join(output_dir, vars['package'],
                                     'testsettings.py')
         os.remove(testsettings)
-        utils.print_egginfo_removal_instructions(output_dir, vars)
+        testsettings_location = os.path.join(vars['package'],
+                                             'testsettings.py')
+        utils.print_egginfo_removal_instructions(
+            output_dir,
+            vars,
+            extra_reverts=[testsettings_location])
