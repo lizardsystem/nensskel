@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.10 (unreleased)
+1.10 (2011-03-31)
 -----------------
 
 - Adding mostly-empty READMEs to the two empty 'fixtures' and
