@@ -139,6 +139,7 @@ CACHE_BACKEND = 'locmem:///'
 MIDDLEWARE_CLASSES = (
     # Gzip needs to be at the top.
     'django.middleware.gzip.GZipMiddleware',
+    'sentry.client.middleware.SentryResponseErrorIdMiddleware',
     # Tracebacks are logged to var/log/django.log by this:
     'lizard_ui.middleware.TracebackLoggingMiddleware',
     # Below is the default list, don't modify it.
