@@ -12,6 +12,9 @@
       <p>
       Excuses voor het ongemak. Neem contact op met de servicedesk van Nelen & Schuurmans om het probleem te melden. Leg exact uit wat U heeft gedaan, zodat de servicedesk het probleem kan reproduceren en verhelpen.
       </p>
+      {% if request.sentry.id %}
+          <p>Foutcode: <strong>{{ request.sentry.id }}</strong>.</p>
+      {% endif %}
       <ul>
 	<li>telefoon: 030-2330250</li>
 	<li>e-mail: <a href="mail:servicedesk@nelen-schuurmans.nl">servicedesk@nelen-schuurmans.nl</a></li>
