@@ -154,6 +154,7 @@ INSTALLED_APPS = (
     'lizard_ui',
     'compressor',
     'staticfiles',
+    'sentry.client',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -175,6 +176,12 @@ MAP_SETTINGS = {
     'base_layer_osm': (
         'http://tile.openstreetmap.nl/tiles/\${z}/\${x}/\${y}.png'),
     }
+
+
+# TODO: Put your real url and key here to configure Sentry.
+SENTRY_REMOTE_URL = 'http://your.sentry.url/store/'
+SENTRY_KEY = 'abcdefg12345'
+
 
 # File logging for production.  If logging is already defined (for instance in
 # developmentsettings.py, this won't have any effect.
