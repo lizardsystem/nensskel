@@ -5,7 +5,7 @@ Changelog for nensskel
 1.12 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Modifying the middleware to include SentryResponseErrorIdMiddleware.
 
 
 1.11 (2011-04-13)
