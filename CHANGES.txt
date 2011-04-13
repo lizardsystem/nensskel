@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.11 (unreleased)
+1.11 (2011-04-13)
 -----------------
 
 - Added django-sentry to the Lizardsite template.
