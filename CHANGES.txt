@@ -5,7 +5,9 @@ Changelog for nensskel
 1.11 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added django-sentry to the Lizardsite template.
+- Adding new file setup.py_tmpl to Lizardsite template.
+- Updating +package+/settings.py_tmpl which adds sentry to INSTALLED_APPS.
 
 
 1.10 (2011-03-31)
