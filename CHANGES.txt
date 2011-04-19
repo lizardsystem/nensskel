@@ -5,7 +5,7 @@ Changelog for nensskel
 1.13 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- nens_djangoapp's ``testsettings.py`` was missing an ``import os``.
 
 
 1.12 (2011-04-13)
