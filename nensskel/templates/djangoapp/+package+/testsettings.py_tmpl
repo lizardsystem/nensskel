@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.gis',
     'django.contrib.sites',
     ]
 ROOT_URLCONF = '${package}.urls'
