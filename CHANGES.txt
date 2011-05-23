@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.13 (unreleased)
+1.13 (2011-05-23)
 -----------------
 
 - Re-release of 1.12 as that download tarball was broken.
