@@ -7,8 +7,10 @@
   # ^^^ TODO: figure out real name
 
   WSGIProcessGroup ${project}
-  WSGIDaemonProcess ${project} threads=10 maximum-requests=10000 user=buildout group=buildout
-  # ^^^ Settings for use on the buildbot machine.  Might need to be changed.
+  WSGIDaemonProcess ${project} deadlock-timeout=15 display-name=${project}_wsgi user=buildout group=buildout
+  # deadlock-timeout: kill off all threads after one of 'em hugged the GIL for
+  # more than 15 seconds. Could help with the occasional
+  # shapefile-problems. (Not totally sure about that, though).
 
   <Location />
     Order deny,allow
