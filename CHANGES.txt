@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.14 (unreleased)
+1.14 (2011-05-30)
 -----------------
 
 - Adding deadlock-timeout and especially display-name to the wsgi config. The
