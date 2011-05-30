@@ -5,7 +5,10 @@ Changelog for nensskel
 1.14 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Adding deadlock-timeout and especially display-name to the wsgi config. The
+  deadlock might help with shapefiles clogging up the server. The display-name
+  shows you which server is actually using up the CPU/mem instead of just
+  showing 'apache2'.
 
 
 1.13 (2011-05-23)
