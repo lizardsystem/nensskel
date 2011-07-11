@@ -118,8 +118,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
-    # Add request to your context (useful for custom tags).
-    'django.core.context_processors.request',
+    # Extra for lizard-map
+    # 'lizard_map.context_processors.processor.processor',
     # Extra for django-staticfiles.
     'staticfiles.context_processors.static_url',
     )

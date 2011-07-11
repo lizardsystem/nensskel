@@ -5,7 +5,8 @@ Changelog for nensskel
 1.15 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added lizard-map context processor (outcommented) in lizardsite
+  settings.py.
 
 
 1.14 (2011-05-30)
