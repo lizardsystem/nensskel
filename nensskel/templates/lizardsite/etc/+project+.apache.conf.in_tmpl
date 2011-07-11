@@ -54,6 +54,6 @@
   # Django is run via WSGI.
   WSGIScriptAlias / \${buildout:directory}/bin/django.wsgi
   # Pre-load django whenever a new wsgi thread/process is started.
-  WSGIImportScript \${buildout:directory}/bin/django.wsgi process-group=${project} application-group=%{GLOBAL}
+  # WSGIImportScript \${buildout:directory}/bin/django.wsgi process-group=${project} application-group=%{GLOBAL}
 
 </VirtualHost>
