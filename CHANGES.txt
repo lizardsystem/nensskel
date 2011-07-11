@@ -5,6 +5,8 @@ Changelog for nensskel
 1.15 (unreleased)
 -----------------
 
+- Removed map_settings from lizardsite settings.py.
+
 - Commented out wsgiimmportscript in apache conf (it gives an error).
 
 - Added lizard-map context processor (outcommented) in lizardsite

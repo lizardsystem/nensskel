@@ -166,18 +166,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 
-MAP_SETTINGS = {
-    'base_layer_type': 'OSM',  # OSM or WMS
-    'projection': 'EPSG:900913',  # EPSG:900913, EPSG:28992
-    'display_projection': 'EPSG:4326',  # EPSG:900913/28992/4326
-    'startlocation_x': '610000',
-    'startlocation_y': '6830000',
-    'startlocation_zoom': '8',
-    'base_layer_osm': (
-        'http://tile.openstreetmap.nl/tiles/\${z}/\${x}/\${y}.png'),
-    }
-
-
 # TODO: Put your real url and key here to configure Sentry.
 SENTRY_REMOTE_URL = 'http://your.sentry.url/store/'
 SENTRY_KEY = 'abcdefg12345'
