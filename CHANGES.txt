@@ -5,6 +5,8 @@ Changelog for nensskel
 1.15 (unreleased)
 -----------------
 
+- Added the KGS to djangoapp and sites and updated for django 1.3.
+
 - Removed map_settings from lizardsite settings.py.
 
 - Commented out wsgiimmportscript in apache conf (it gives an error).
