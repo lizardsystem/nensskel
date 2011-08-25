@@ -1,14 +1,12 @@
-import logging
-
-# Set up logging BEFORE importing the base settings.
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(name)s %(levelname)s %(message)s')
+from lizard_ui.settingshelper import setup_logging
 
 from ${package}.settings import *
 
-
 DEBUG = True
+
+# By default, var/log/django.log gets WARN level logging, the console gets
+# DEBUG level logging.
+LOGGING = setup_logging(BUILDOUT_DIR)
 
 # ENGINE: 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 # In case of geodatabase, prepend with:
@@ -24,10 +22,10 @@ DATABASES = {
     # the specified database exists. When the tests cannot run, Jenkins sees
     # that as an error.
     'default': {
-        'NAME': os.path.join(BUILDOUT_DIR, 'var', 'sqlite', 'test.db'),
-        'ENGINE': 'sqlite3',  #'django.contrib.gis.db.backends.postgis',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': '${package}',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'USER': 'buildout',
+        'PASSWORD': 'buildout',
         'HOST': '',  # empty string for localhost.
         'PORT': '',  # empty string for default.
         }

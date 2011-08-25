@@ -1,10 +1,12 @@
 [buildout]
 index = http://packages.lizardsystem.nl
+extends =
+    http://packages.lizardsystem.nl/kgs/1.19/versions.cfg
 find-links =
 unzip = true
 prefer-final = true
 versions = versions
-extensions = buildout.dumppickedversions
+extensions = buildout-versions
 parts =
     sysegg
     mkdir
@@ -13,7 +15,7 @@ parts =
     console_scripts
     pyflakes
     apacheconf
-    build_static
+    collectstatic
     sphinx
 develop = .
 #         local_checkouts/some_trunk_external
@@ -22,9 +24,11 @@ eggs =
 
 
 [versions]
-# Specific pins
+# Specific pins. We inherit lots of pins from the KGS, so if you add a
+# development egg, you really need to un-pin it here.
 ${project} =
-# Reported by buildout.dumppickedversions
+
+# Reported by buildout-versions
 
 
 [sysegg]
@@ -51,7 +55,6 @@ paths =
 # Sets up django for testing our application.
 # See http://jacobian.org/writing/django-apps-with-buildout/
 recipe = djangorecipe
-version = 1.2.3
 wsgi = true
 wsgilog = \${buildout:directory}/var/log/django.log
 project = ${package}
@@ -97,11 +100,11 @@ input = \${buildout:directory}/etc/${project}.apache.conf.in
 output = \${buildout:directory}/etc/${project}.apache.conf
 
 
-[build_static]
+[collectstatic]
 recipe = iw.recipe.cmd
 on_install = true
 on_update = true
-cmds = \${buildout:bin-directory}/django build_static --noinput
+cmds = \${buildout:bin-directory}/django collectstatic --noinput
 
 
 [sphinx]
