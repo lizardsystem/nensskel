@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.15 (unreleased)
+1.15 (2011-08-25)
 -----------------
 
 - Added the KGS to djangoapp and sites and updated for django 1.3.
