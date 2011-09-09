@@ -5,6 +5,12 @@ Changelog for nensskel
 1.16 (unreleased)
 -----------------
 
+- Removed unneeded lizard-ui middleware as django 1.3's logging handles it.
+
+- Adjusted context processors to django 1.3's default list.
+
+- Added logging setup for sentry in the lizard site template.
+
 - Cleaned up the urls.py from djangoapp.
 
 
