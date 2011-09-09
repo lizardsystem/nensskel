@@ -2,8 +2,10 @@ Changelog for nensskel
 ======================
 
 
-1.16 (unreleased)
+1.16 (2011-09-09)
 -----------------
+
+- Added git ignore file and basic MANIFEST.in to the templates.
 
 - Removed unneeded lizard-ui middleware as django 1.3's logging handles it.
 
