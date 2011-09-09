@@ -3,9 +3,9 @@ from setuptools import setup
 version = '1.16dev'
 
 long_description = '\n\n'.join(
-    [open('README.txt').read(),
-     open('CHANGES.txt').read(),
-     open('TODO.txt').read()])
+    [open('README.rst').read(),
+     open('CHANGES.rst').read(),
+     open('TODO.rst').read()])
 
 install_requires = [
     'setuptools',
