@@ -5,7 +5,7 @@ version = '1.16dev'
 long_description = '\n\n'.join(
     [open('README.rst').read(),
      open('CHANGES.rst').read(),
-     open('TODO.rst').read()])
+     ])
 
 install_requires = [
     'setuptools',
