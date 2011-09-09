@@ -11,9 +11,15 @@ Optionally it also creates a trunk/tags/branches structure in svn for you.
 
 Just call the nensskel script to get usage information.
 
-Installation can be done by a simple::
+Installation can be done with pip or easy_install::
 
     $> easy_install nensskel
+
+(Probably you need to run it with sudo on osx/linux).
+
+Don't forget to update from time to time::
+
+    $> easy_install --upgrade nensskel
 
 
 Company-centricity
@@ -43,3 +49,12 @@ http://pythonpaste.org/script/developer.html for some limited documentation on
 what paster can do.  If you want more elaborate examples:
 http://svn.plone.org/svn/collective/ZopeSkel/trunk/ is the most elaborate set
 of templates available.
+
+
+Development and issue tracker
+-----------------------------
+
+Nensskel is developed on github: https://github.com/lizardsystem/nensskel .
+
+The issue tracker is there, too:
+https://github.com/lizardsystem/nensskel/issues .
