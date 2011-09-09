@@ -1,0 +1,2 @@
+include *.rst
+recursive-include nensskel *.rst *.py *tmpl *.html
