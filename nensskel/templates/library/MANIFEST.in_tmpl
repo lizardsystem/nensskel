@@ -1,0 +1,2 @@
+include *.rst
+recursive-include $package *.rst *.py *.html *.css *.js *.jpg *.png *.gif *.pdf
