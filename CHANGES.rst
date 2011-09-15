@@ -5,7 +5,8 @@ Changelog for nensskel
 1.17 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Important bugfix: the "hidden" ``.something`` files weren't being
+  generated. They *are* now.
 
 
 1.16 (2011-09-09)
