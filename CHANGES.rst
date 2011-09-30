@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.17 (unreleased)
+1.17 (2011-09-30)
 -----------------
 
 - Important bugfix: the "hidden" ``.something`` files weren't being
