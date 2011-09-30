@@ -1,10 +1,12 @@
 [buildout]
 index = http://packages.lizardsystem.nl
-find-links = http://packages.lizardsystem.nl/coverage-3.4a1.tar.gz
+find-links =
 unzip = true
 prefer-final = true
 versions = versions
-extensions = buildout.dumppickedversions
+extensions =
+    mr.developer
+    buildout-versions
 parts =
 #    sysegg
     test
@@ -13,7 +15,6 @@ parts =
     pyflakes
     sphinx
 develop = .
-#         local_checkouts/some_trunk_external
 eggs =
     ${project}
 
@@ -23,6 +24,12 @@ eggs =
 ${project} =
 
 # Reported by buildout.dumppickedversions
+
+
+[sources]
+# Examples:
+# lizard-ui = git git@github.com:lizardsystem/nensskel.git
+# lizard-ui = svn https://office.nelen-schuurmans.nl/svn/Products/djangoapps/lizard-ui/trunk
 
 
 # [sysegg]
@@ -51,7 +58,7 @@ eggs =
     \${buildout:eggs}
 # Development tools
     eazysvn
-    coverage > 3.3.1
+    coverage
     pep8
     zest.releaser
 
