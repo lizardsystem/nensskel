@@ -1,12 +1,14 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/1.23/versions.cfg
+    http://packages.lizardsystem.nl/kgs/latest.cfg
 find-links =
 unzip = true
 prefer-final = true
 versions = versions
-extensions = buildout-versions
+extensions =
+    mr.developer
+    buildout-versions
 parts =
     sysegg
     mkdir
@@ -16,7 +18,6 @@ parts =
     pyflakes
     sphinx
 develop = .
-#         local_checkouts/some_trunk_external
 eggs =
     ${project}
 
@@ -27,6 +28,12 @@ eggs =
 ${project} =
 
 # Reported by buildout-versions
+
+
+[sources]
+# Examples:
+# lizard-ui = git git@github.com:lizardsystem/nensskel.git
+# lizard-ui = svn https://office.nelen-schuurmans.nl/svn/Products/djangoapps/lizard-ui/trunk
 
 
 [sysegg]
