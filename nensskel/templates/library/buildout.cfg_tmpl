@@ -23,7 +23,7 @@ eggs =
 # Specific pins
 ${project} =
 
-# Reported by buildout.dumppickedversions
+# Reported by buildout-versions
 
 
 [sources]
