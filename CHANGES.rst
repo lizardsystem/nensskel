@@ -5,7 +5,12 @@ Changelog for nensskel
 1.18 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Not git-ignoring ``*.mo`` files by default: django doesn't compile them on
+  the fly, so they need to be included with the source code.
+
+- Using 'graft' option in the MANIFEST.in to just include everything in our
+  project directory. .pyc/pyo files are excluded anyway, so this is more or
+  less OK.
 
 
 1.17 (2011-09-30)

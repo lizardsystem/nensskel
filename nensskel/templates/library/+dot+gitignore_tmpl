@@ -25,7 +25,8 @@ pip-log.txt
 nosetests.xml
 
 #Translations
-*.mo
+# *.mo
+# ^^^ No, django needs the .mo files as it doesn't compile them on the fly.
 
 #Mr Developer
 .mr.developer.cfg
