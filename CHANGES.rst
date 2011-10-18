@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.18 (unreleased)
+1.18 (2011-10-18)
 -----------------
 
 - Not git-ignoring ``*.mo`` files by default: django doesn't compile them on
