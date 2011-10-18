@@ -1,2 +1,4 @@
+# Include docs in the root.
 include *.rst
-recursive-include nensskel *.rst *.py *tmpl *.html
+# Include everything in our project directory.
+graft nensskel
