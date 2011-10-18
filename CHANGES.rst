@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.19 (unreleased)
+1.19 (2011-10-18)
 -----------------
 
 - Updated the .coveragerc to be more complete.
