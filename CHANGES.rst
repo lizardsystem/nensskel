@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.20 (unreleased)
+1.20 (2011-10-21)
 -----------------
 
 - Added MEDIA_URL and MEDIA_ROOT to the djangoapp template. The debugmode
