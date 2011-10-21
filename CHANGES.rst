@@ -5,7 +5,8 @@ Changelog for nensskel
 1.20 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added MEDIA_URL and MEDIA_ROOT to the djangoapp template. The debugmode
+  urlpatterns loaded in ``urls.py`` fail with a traceback otherwise.
 
 
 1.19 (2011-10-18)
