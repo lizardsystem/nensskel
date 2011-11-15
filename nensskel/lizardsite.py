@@ -28,6 +28,7 @@ class Lizardsite(templates.Template):
         os.remove(testsettings)
         testsettings_location = os.path.join(vars['package'],
                                              'testsettings.py')
+        os.remove(os.path.join(output_dir, 'buildout.cfg'))
         utils.print_egginfo_removal_instructions(
             output_dir,
             vars,

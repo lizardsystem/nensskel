@@ -1,7 +1,8 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/1.32/versions.cfg
+    http://packages.lizardsystem.nl/kgs/1.38/versions.cfg
+    server.cfg
 find-links =
 unzip = true
 prefer-final = true
@@ -19,6 +20,7 @@ parts =
     apacheconf
     collectstatic
     sphinx
+    \${buildout:serverparts}
 develop = .
 eggs =
     ${project}
@@ -58,6 +60,17 @@ paths =
     \${buildout:directory}/var/sqlite
 
 
+[serverconfig]
+# Configuration for setting up gunicorn, supervisor etc.
+# For the gunicorn port, check on the server in the other sites as
+# there should be no overlap. And simply give the supervisor port one
+# number higher.
+gunicorn-port = todo
+supervisor-port = todo
+sitename = todo
+workers = 5
+
+
 [django]
 # Sets up django for testing our application.
 # See http://jacobian.org/writing/django-apps-with-buildout/
@@ -86,8 +99,8 @@ eggs =
     coverage
     eazysvn
     pep8
-    zc.sourcerelease
     zest.releaser
+    sitesetup
 
 
 [pyflakes]

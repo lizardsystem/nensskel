@@ -37,4 +37,5 @@ def setup_test(test):
 
 def teardown_test(test):
     """Clean up the temp directory"""
-    shutil.rmtree(test.tempdir)
+    #shutil.rmtree(test.tempdir)
+    print "TEST DIR", test.tempdir

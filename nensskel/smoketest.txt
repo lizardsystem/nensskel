@@ -83,11 +83,13 @@ Do the smoke tests:
      'README.rst',
      'TODO.rst',
      'bootstrap.py',
-     'buildout.cfg',
-     'deploy.cfg',
+     'development.cfg',
      'doc',
      'etc',
+     'fabfile.py',
      'nieuwegein',
+     'production.cfg',
+     'server.cfg',
      'setup.cfg',
      'setup.py']
     >>> subdir_contents = sorted(os.listdir(
@@ -127,6 +129,7 @@ And now for some serious buildout running
 
 
     >>> os.chdir(os.path.join(tmp, 'nieuwegein'))
+    >>> dont_care = system("ln -s development.cfg buildout.cfg")
     >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../nieuwegein/bin'.
