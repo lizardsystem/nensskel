@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.21 (unreleased)
+1.21 (2011-11-15)
 -----------------
 
 - Using latest and greatest server setup. Including nginx and sitesetup.
