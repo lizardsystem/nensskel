@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.22 (unreleased)
+1.22 (2011-12-08)
 -----------------
 
 - Added a templates/ subdirectory to the djangoapp.
