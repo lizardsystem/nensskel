@@ -5,7 +5,9 @@ Changelog for nensskel
 1.22 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added a templates/ subdirectory to the djangoapp.
+
+- Renamed media/ dir in djangoapp to static/ to match Django 1.3.
 
 
 1.21 (2011-11-15)
