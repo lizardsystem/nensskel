@@ -1,7 +1,7 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/1.38/versions.cfg
+    http://packages.lizardsystem.nl/kgs/1.49/versions.cfg
     server.cfg
 find-links =
 unzip = true
@@ -16,10 +16,8 @@ parts =
     django
     omelette
     console_scripts
+    pydev
     pyflakes
-    apacheconf
-    collectstatic
-    sphinx
     \${buildout:serverparts}
 develop = .
 eggs =
@@ -101,6 +99,7 @@ eggs =
     pep8
     zest.releaser
     sitesetup
+    fabric
 
 
 [pyflakes]
@@ -114,21 +113,15 @@ entry-points = pyflakes=pkg_resources:run_script
 arguments = 'pyflakes', 'pyflakes'
 
 
-[apacheconf]
-recipe = collective.recipe.template
-input = \${buildout:directory}/etc/${project}.apache.conf.in
-output = \${buildout:directory}/etc/${project}.apache.conf
-
-
-[collectstatic]
-recipe = iw.recipe.cmd
-on_install = true
-on_update = true
-cmds = \${buildout:bin-directory}/django collectstatic --noinput
-
-
 [sphinx]
 recipe = collective.recipe.sphinxbuilder
 source = \${buildout:directory}/doc/source
 build = \${buildout:directory}/doc/build
 eggs = \${buildout:eggs}
+
+[pydev]
+recipe = pb.recipes.pydev
+eggs = \${buildout:eggs}
+pydevproject_path = \${buildout:directory}/.pydevproject
+extra_paths =
+

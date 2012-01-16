@@ -5,7 +5,8 @@ Changelog for nensskel
 1.23 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Updated lizardsite skeleton to latest server configuration and
+  fabfile.
 
 
 1.22 (2011-12-08)
