@@ -8,6 +8,9 @@ Changelog for nensskel
 - Updated lizardsite skeleton to latest server configuration and
   fabfile.
 
+- Added stagingsettings.py, staging.cfg
+
+- Made tests work
 
 1.22 (2011-12-08)
 -----------------

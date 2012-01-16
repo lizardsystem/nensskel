@@ -6,5 +6,5 @@ parts +=
 
 
 [django]
-# Use the real settings instead of developmentsettings.
-settings = settings
+# Use the staging settings instead of developmentsettings.
+settings = stagingsettings

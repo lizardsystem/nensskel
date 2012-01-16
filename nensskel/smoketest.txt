@@ -86,17 +86,19 @@ Do the smoke tests:
      'development.cfg',
      'doc',
      'etc',
+     'fabfile.cfg',
      'fabfile.py',
      'nieuwegein',
      'production.cfg',
      'server.cfg',
      'setup.cfg',
-     'setup.py']
+     'setup.py',
+     'staging.cfg']
     >>> subdir_contents = sorted(os.listdir(
     ...     os.path.join(tmp, 'nieuwegein', 'nieuwegein')))
     >>> settings = [item for item in subdir_contents if 'settings' in item]
     >>> pprint(settings)
-    ['developmentsettings.py', 'settings.py']
+    ['developmentsettings.py', 'settings.py', 'stagingsettings.py']
 
 And now for some serious buildout running
 
