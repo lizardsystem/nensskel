@@ -5,6 +5,9 @@ Changelog for nensskel
 1.23 (unreleased)
 -----------------
 
+- Using url() instead of tuples in the url patterns again. Plus fixed syntax
+  error there.
+
 - Updated lizardsite skeleton to latest server configuration and
   fabfile.
 
