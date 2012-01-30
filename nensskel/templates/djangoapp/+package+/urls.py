@@ -10,7 +10,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    (r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     # url(r'^something/',
     #     direct.import.views.some_method,
     #     name="name_it"),
