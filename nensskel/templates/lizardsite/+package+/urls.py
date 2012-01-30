@@ -11,9 +11,9 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    (r'^$', HomepageView.as_view(),
-    (r'^admin/', include(admin.site.urls)),
-    (r'^map/', include('lizard_map.urls')),
+    url(r'^$', HomepageView.as_view()),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^map/', include('lizard_map.urls')),
     # url(r'^something/',
     #     direct.import.views.some_method,
     #     name="name_it"),
