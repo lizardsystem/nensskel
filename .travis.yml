@@ -3,7 +3,7 @@ python:
   - 2.6
   - 2.7
 before_install:
-  - sudo apt-get build-dep python-psycopg2 python-matplotlib libjpeg-dev libtiff4-dev python-imaging python-pyproj
+  - sudo apt-get build-dep python-psycopg2 python-matplotlib libjpeg62 libtiff4-dev python-imaging python-pyproj
 notifications:
   irc: "irc.freenode.org#nens"
   email: false
