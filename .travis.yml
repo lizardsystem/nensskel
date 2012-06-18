@@ -9,6 +9,6 @@ before_install:
   - sudo apt-get git mercurial bzr
 install:
   - python bootstrap.py
-  - bin/buildout -vn
+  - bin/buildout -v
 script:
   - bin/test
