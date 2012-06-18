@@ -1,7 +1,7 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/1.49/versions.cfg
+    http://packages.lizardsystem.nl/kgs/3.0/versions.cfg
     server.cfg
 find-links =
 unzip = true
@@ -44,9 +44,9 @@ recipe = osc.recipe.sysegg
 force-sysegg = true
 eggs =
     psycopg2
-    matplotlib
-    PIL
-    pyproj
+    # matplotlib
+    # PIL
+    # pyproj
 
 
 [mkdir]

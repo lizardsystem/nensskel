@@ -3,15 +3,13 @@ python:
   - 2.6
   - 2.7
 before_install:
-  - sudo apt-get build-dep python-psycopg2 python-matplotlib libjpeg62 libtiff4-dev python-imaging python-pyproj python-numpy python-scipy
+  - sudo apt-get build-dep python-psycopg2
 notifications:
   irc:
     channels: "irc.freenode.org#nens"
     on_success: change
 install:
-  - pip install psycopg2 numpy pyproj pil
-  - pip install scipy
-  - pip install matplotlib
+  - pip install psycopg2
   - python bootstrap.py
   - bin/buildout -v
 script:
