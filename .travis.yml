@@ -6,6 +6,7 @@ before_install:
   - sudo apt-get build-dep python-psycopg2 python-matplotlib libjpeg62 libtiff4-dev python-imaging python-pyproj python-numpy python-scipy
 notifications:
   irc: "irc.freenode.org#nens"
+    on_success: change
 install:
   - pip install psycopg2 numpy scipy matplotlib pyproj pil
   - python bootstrap.py
