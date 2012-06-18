@@ -9,7 +9,8 @@ notifications:
     on_success: change
 install:
   - pip install psycopg2 numpy pyproj pil
-  - pip install scipy matplotlib
+  - pip install scipy
+  - pip install matplotlib
   - python bootstrap.py
   - bin/buildout -v
 script:
