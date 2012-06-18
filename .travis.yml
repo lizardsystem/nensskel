@@ -3,11 +3,12 @@ python:
   - 2.6
   - 2.7
 before_install:
-  - sudo apt-get install python-psycopg2
+  - sudo apt-get build-dep python-psycopg2
 notifications:
   irc: "irc.freenode.org#nens"
   email: false
 install:
+  - pip install psycopg2
   - python bootstrap.py
   - bin/buildout -v
 script:
