@@ -6,7 +6,7 @@ notifications:
   irc: "irc.freenode.org#nens"
   email: false
 before_install:
-  - sudo apt-get git mercurial bzr
+  - sudo apt-get install git mercurial bzr
 install:
   - python bootstrap.py
   - bin/buildout -v
