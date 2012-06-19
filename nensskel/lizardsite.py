@@ -1,6 +1,6 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
 import os
-import uuid
+import random
 import sys
 
 from paste.script import templates
@@ -11,6 +11,8 @@ from nensskel import utils
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 
+CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+
 
 class Lizardsite(templates.Template):
     _template_dir = 'templates/lizardsite'
@@ -19,7 +21,8 @@ class Lizardsite(templates.Template):
     use_cheetah = True
 
     def run(self, command, output_dir, vars):
-        vars['secret_key'] = uuid.uuid4()
+        secret = ''.join([random.choice(CHARS) for i in range(50)])
+        vars['secret_key'] = secret
         templates.Template.run(self, command, output_dir, vars)
 
     def post(self, command, output_dir, vars):
