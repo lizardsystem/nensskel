@@ -2,6 +2,12 @@ Changelog for nensskel
 ======================
 
 
+1.25 (unreleased)
+-----------------
+
+- Nothing changed yet.
+
+
 1.24 (2012-06-19)
 -----------------
 
