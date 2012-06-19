@@ -1,5 +1,6 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
 import os
+import pkginfo
 import sys
 
 from paste.script import templates
@@ -29,6 +30,7 @@ class Library(templates.Template):
             print "Project is called %s, the package will be %s" % (
                 project, package)
         vars['package'] = package
+        vars['nensskel_version'] = pkginfo.Installed('nensskel').version
         templates.Template.run(self, command, output_dir, vars)
 
     def post(self, command, output_dir, vars):

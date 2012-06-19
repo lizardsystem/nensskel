@@ -9,6 +9,7 @@ long_description = '\n\n'.join(
 
 install_requires = [
     'setuptools',
+    'pkginfo',
     'Cheetah',
     'PasteScript>=1.6',
     ]

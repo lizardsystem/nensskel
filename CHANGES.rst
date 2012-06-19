@@ -5,6 +5,9 @@ Changelog for nensskel
 1.23 (unreleased)
 -----------------
 
+- Added nensskel version number to the generated 'initial generation'
+  changelog entry.
+
 - Removed TODO.rst from all the templates. We don't actually use it.
 
 - Added configuration for testing `on travis
