@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.23 (unreleased)
+1.24 (2012-06-19)
 -----------------
 
 - Added nensskel version number to the generated 'initial generation'
