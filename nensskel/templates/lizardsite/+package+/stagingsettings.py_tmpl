@@ -3,11 +3,14 @@ from ${package}.settings import *
 DATABASES = {
     # Changed server from production to staging
     'default': {
-        'NAME': 'TODO',
+        'NAME': '${package}',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'USER': 'TODO',
         'PASSWORD': 'TODO',
-        'HOST': 'TODO',
-        'PORT': '',
+        'HOST': 's-web-db-00-d03.external-nens.local',
+        'PORT': '5432',
         },
     }
+
+# TODO: add staging gauges ID here.
+UI_GAUGES_SITE_ID = ''  # Staging has a separate one.
