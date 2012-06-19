@@ -8,9 +8,10 @@ notifications:
   irc:
     channels: "irc.freenode.org#nens"
     on_success: change
+  email: false
 install:
   - pip install psycopg2
   - python bootstrap.py
-  - bin/buildout -v
+  - bin/buildout
 script:
   - bin/test
