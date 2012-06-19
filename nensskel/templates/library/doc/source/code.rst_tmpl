@@ -1,6 +1,6 @@
 Code documentation
 ==================
 
-.. automodule:: ${package}.something
+.. automodule:: ${package}.views
    :members:
 
