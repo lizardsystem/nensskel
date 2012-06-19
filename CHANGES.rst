@@ -5,6 +5,8 @@ Changelog for nensskel
 1.23 (unreleased)
 -----------------
 
+- Removed TODO.rst from all the templates. We don't actually use it.
+
 - Added configuration for testing `on travis
   <http://travis-ci.org/#!/lizardsystem/nensskel>`_.
 
