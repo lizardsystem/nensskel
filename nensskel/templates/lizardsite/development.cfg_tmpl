@@ -1,7 +1,7 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/3.0/versions.cfg
+    http://packages.lizardsystem.nl/kgs/3.1.11/versions.cfg
     server.cfg
 find-links =
 unzip = true
@@ -16,8 +16,9 @@ parts =
     django
     omelette
     console_scripts
-    pydev
     pyflakes
+    sphinx
+    pydev
     \${buildout:serverparts}
 develop = .
 eggs =
@@ -34,8 +35,7 @@ ${project} =
 
 [sources]
 # Examples:
-# lizard-ui = git git@github.com:lizardsystem/nensskel.git
-# lizard-ui = svn https://office.nelen-schuurmans.nl/svn/Products/djangoapps/lizard-ui/trunk
+# lizard-ui = git git@github.com:lizardsystem/lizard-ui.git
 
 
 [sysegg]
@@ -66,7 +66,7 @@ paths =
 gunicorn-port = todo
 supervisor-port = todo
 sitename = todo
-workers = 5
+workers = 3
 
 
 [django]
@@ -94,8 +94,7 @@ interpreter = python
 eggs =
     \${buildout:eggs}
 # Development tools
-    coverage
-    eazysvn
+    createcoverage
     pep8
     zest.releaser
     sitesetup
@@ -119,9 +118,9 @@ source = \${buildout:directory}/doc/source
 build = \${buildout:directory}/doc/build
 eggs = \${buildout:eggs}
 
+
 [pydev]
 recipe = pb.recipes.pydev
 eggs = \${buildout:eggs}
 pydevproject_path = \${buildout:directory}/.pydevproject
 extra_paths =
-
