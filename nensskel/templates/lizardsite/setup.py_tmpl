@@ -10,17 +10,16 @@ long_description = '\n\n'.join([
 
 install_requires = [
     'Django',
+    'django-celery',
     'django-extensions',
     'django-nose',
-    'django-sentry',
     'gunicorn',
-    'lizard-ui >= 3.0',
     'lizard-map',
-    'pkginfo',
+    'lizard-ui >= 4.0b5',
+    'python-memcached',
+    'raven',
+    'werkzeug',
     ],
-
-tests_require = [
-    ]
 
 setup(name='${project}',
       version=version,
@@ -39,8 +38,6 @@ setup(name='${project}',
       include_package_data=True,
       zip_safe=False,
       install_requires=install_requires,
-      tests_require=tests_require,
-      extras_require={'test': tests_require},
       entry_points={
           'console_scripts': [
           ]},
