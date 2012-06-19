@@ -5,6 +5,9 @@ Changelog for nensskel
 1.23 (unreleased)
 -----------------
 
+- Added configuration for testing `on travis
+  <http://travis-ci.org/#!/lizardsystem/nensskel>`_.
+
 - Using url() instead of tuples in the url patterns again. Plus fixed syntax
   error there.
 
@@ -14,6 +17,7 @@ Changelog for nensskel
 - Added stagingsettings.py, staging.cfg
 
 - Made tests work
+
 
 1.22 (2011-12-08)
 -----------------
