@@ -5,7 +5,8 @@ Changelog for nensskel
 1.25 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Updated .gitignore of sites: we now ignore the nginx config files instead of
+  the not-used-anymore apache ones.
 
 
 1.24 (2012-06-19)
