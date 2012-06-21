@@ -9,10 +9,8 @@ The nensskel script creates a directory structure with lots of basic files
 (like a readme and a setup.py) already there and partially filled in.
 Optionally it also creates a trunk/tags/branches structure in svn for you.
 
-Nensskel is `tested with travis
-<http://travis-ci.org/#!/lizardsystem/nensskel>`_:
-
 .. image:: https://secure.travis-ci.org/lizardsystem/nensskel.png?branch=master
+   :target: http://travis-ci.org/#!/lizardsystem/nensskel
 
 Just call the nensskel script to get usage information.
 
