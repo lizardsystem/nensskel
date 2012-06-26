@@ -29,4 +29,13 @@ def print_egginfo_removal_instructions(output_dir, vars, extra_reverts=None):
         for extra_revert in extra_reverts:
             print "svn revert %s" % extra_revert
     print "rm -rf %s" % egginfo_dirname
+    if not using_svn:
+        # Assumption: git.
+        print "git init"
+        print "git add -A"
+        print "git commit -m 'Generated with nensskel'"
+        git_url = "git@github.com:%(github_organization)s/%(project)s.git"
+        git_url = git_url % vars
+        print "git remote add origin %s" % git_url
+        print "git push -u origin master"
     print

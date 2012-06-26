@@ -5,6 +5,10 @@ Changelog for nensskel
 1.25 (unreleased)
 -----------------
 
+- Git instructions are now printed after generating the project (if we're not
+  generating an svn project). It assumes nens/lizardsystem github URLs (which
+  you can change, of course).
+
 - Added more example imports to ``views.py`` and ``models.py``, for instance
   the ``ugettext``/``ugettext_lazy`` import. And the lizard-ui and lizard-map
   base class based views.

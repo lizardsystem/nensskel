@@ -31,6 +31,10 @@ class Library(templates.Template):
                 project, package)
         vars['package'] = package
         vars['nensskel_version'] = pkginfo.Installed('nensskel').version
+        if 'lizard' in project:
+            vars['github_organization'] = 'lizardsystem'
+        else:
+            vars['github_organization'] = 'nens'
         templates.Template.run(self, command, output_dir, vars)
 
     def post(self, command, output_dir, vars):
