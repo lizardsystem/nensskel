@@ -33,6 +33,6 @@ nosetests.xml
 .mr.developer.cfg
 src
 
-# Ignore generated nginx config files
-etc/*.logrotate
+# Ignore generated config files
 etc/*.nginx.conf
+etc/*.logrotate

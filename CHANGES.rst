@@ -5,8 +5,19 @@ Changelog for nensskel
 1.25 (unreleased)
 -----------------
 
-- Updated .gitignore of sites: we now ignore the nginx config files instead of
-  the not-used-anymore apache ones.
+- Added more example imports to ``views.py`` and ``models.py``, for instance
+  the ``ugettext``/``ugettext_lazy`` import. And the lizard-ui and lizard-map
+  base class based views.
+
+- Added example class based view configuration in ``urls.py``.
+
+- Added ``admin.py``.
+
+- Added the ``from __future__ import unicode_literals`` import to use unicode
+  everywhere.
+
+- Updated .gitignore: we now ignore the nginx config files instead of the
+  not-used-anymore apache ones.
 
 
 1.24 (2012-06-19)
