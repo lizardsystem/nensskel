@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.25 (unreleased)
+1.25 (2012-06-26)
 -----------------
 
 - Git instructions are now printed after generating the project (if we're not
