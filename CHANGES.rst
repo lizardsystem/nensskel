@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.26 (unreleased)
+1.26 (2012-06-28)
 -----------------
 
 - Fixed small issues in the lizardsite template:
