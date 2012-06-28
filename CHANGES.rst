@@ -5,7 +5,13 @@ Changelog for nensskel
 1.26 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Fixed small issues in the lizardsite template:
+
+  - Added ``auto-checkout`` plus explanation to its buildout config.
+
+  - Generated random password for the production/staging databases.
+
+  - Using site name as database name.
 
 
 1.25 (2012-06-26)

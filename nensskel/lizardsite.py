@@ -23,6 +23,11 @@ class Lizardsite(templates.Template):
     def run(self, command, output_dir, vars):
         secret = ''.join([random.choice(CHARS) for i in range(50)])
         vars['secret_key'] = secret
+        db_password1 = ''.join([random.choice(CHARS) for i in range(10)])
+        db_password2 = ''.join([random.choice(CHARS) for i in range(10)])
+        vars['production_db_password'] = db_password1
+        vars['staging_db_password'] = db_password2
+
         templates.Template.run(self, command, output_dir, vars)
 
     def post(self, command, output_dir, vars):

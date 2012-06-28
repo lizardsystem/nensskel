@@ -61,8 +61,8 @@ DATABASES = {
     'default': {
         'NAME': '${package}',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'USER': 'TODO',
-        'PASSWORD': 'TODO',
+        'USER': '${package}',
+        'PASSWORD': '${production_db_password}',
         'HOST': 'p-web-db-00-d03.external-nens.local',
         'PORT': '5432',
         }

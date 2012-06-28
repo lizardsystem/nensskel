@@ -15,5 +15,5 @@ correct configuration. On your development machine, that is
 ``development.cfg`` (and ``staging.cfg`` or ``production.cfg``, for instance
 on the server)::
 
-    $> ln -s development.cfg buildout.cfg
+    $ ln -s development.cfg buildout.cfg
 
