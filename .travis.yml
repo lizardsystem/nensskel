@@ -2,7 +2,7 @@ language: python
 python:
   - 2.7
 before_install:
-  - sudo apt-get build-dep python2.7-psycopg2
+  - sudo apt-get python2.7-psycopg2
 notifications:
   irc:
     channels: "irc.freenode.org#nens"
