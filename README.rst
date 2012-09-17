@@ -16,13 +16,13 @@ Just call the nensskel script to get usage information.
 
 Installation can be done with pip or easy_install::
 
-    $> easy_install nensskel
+    $ easy_install nensskel
 
 (Probably you need to run it with sudo on osx/linux).
 
 Don't forget to update from time to time::
 
-    $> easy_install --upgrade nensskel
+    $ easy_install --upgrade nensskel
 
 
 Company-centricity
