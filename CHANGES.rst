@@ -5,7 +5,9 @@ Changelog for nensskel
 1.27 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added lizard-wms (and lizard-maptree) to the lizardsite template. Almost
+  every site needs them and it makes the empty site more suited for demo
+  purposes and experimenting.
 
 
 1.26 (2012-06-28)

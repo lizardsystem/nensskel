@@ -14,6 +14,7 @@ urlpatterns = patterns(
     '',
     url(r'^$', HomepageView.as_view()),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^webmap/', include('lizard_wms.urls')),
     url(r'^map/', include('lizard_map.urls')),
     url(r'^ui/', include('lizard_ui.urls')),
     # url(r'^something/',

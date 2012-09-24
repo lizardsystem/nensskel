@@ -136,6 +136,10 @@ MIDDLEWARE_CLASSES = (
 
 INSTALLED_APPS = (
     '${package}',
+    # lizard_maptree and lizard_wms are included for demo purposes. Almost
+    # every site needs them, but you're free to remove them if unneeded.
+    'lizard_maptree',
+    'lizard_wms',
     'lizard_map',
     'lizard_ui',
     'lizard_security',
