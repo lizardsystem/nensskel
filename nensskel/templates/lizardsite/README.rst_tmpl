@@ -7,7 +7,7 @@ Usage, etc.
 
 
 
-Symlink a buildout configuration
+Initial setup
 --------------------------------
 
 Initially, there's no ``buildout.cfg``. You need to make that a symlink to the
@@ -17,3 +17,23 @@ on the server)::
 
     $ ln -s development.cfg buildout.cfg
 
+Then run bootstrap and buildout, as usual::
+
+    $ python bootstrap.py
+    $ bin/buildout
+
+Set up a database (and yes, set up an admin user when asked)::
+
+    $ bin/django syncdb
+    $ bin/django migrate
+
+And import two fixtures. The background_maps sets up a couple of lizard-map
+defaults. Democontent gives you an initial homepage and a link to some WMS
+layers.
+
+    $ bin/django loaddata background_maps
+    $ bin/django loaddata democontent
+
+Start the server::
+
+    $ bin/django runserver

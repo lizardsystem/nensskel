@@ -1,0 +1,39 @@
+SpatiaLite version ..: 3.0.0-beta	Supported Extensions:
+	- 'VirtualShape'	[direct Shapefile access]
+	- 'VirtualDbf'		[direct Dbf access]
+	- 'VirtualText'		[direct CSV/TXT access]
+	- 'VirtualXL'		[direct XLS access]
+	- 'VirtualText'		[direct CSV/TXT access]
+	- 'VirtualNetwork'	[Dijkstra shortest path]
+	- 'RTree'		[Spatial Index - R*Tree]
+	- 'MbrCache'		[Spatial Index - MBR cache]
+	- 'VirtualSpatialIndex'	[R*Tree metahandler]
+	- 'VirtualFDO'		[FDO-OGR interoperability]
+	- 'SpatiaLite'		[Spatial SQL - OGC]
+PROJ.4 Rel. 4.7.1, 23 September 2009
+GEOS version 3.2.2-CAPI-1.6.2
+[
+  {
+    "pk": 1,
+    "model": "lizard_ui.applicationscreen",
+    "fields": {
+      "description": "",
+      "name": "Home",
+      "slug": "home"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "lizard_ui.applicationicon",
+    "fields": {
+      "index": 1000,
+      "description": "WMS layers",
+      "url": "/webmap/",
+      "data_set": null,
+      "sub_screen": null,
+      "application_screen": 1,
+      "icon": "/static_media/lizard_ui/app_icons/kaartlagen.png",
+      "name": "WMS"
+    }
+  }
+]
