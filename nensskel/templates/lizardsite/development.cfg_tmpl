@@ -1,7 +1,7 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/3.1.11/versions.cfg
+    http://packages.lizardsystem.nl/kgs/3.1.14/versions.cfg
     server.cfg
 find-links =
 unzip = true
