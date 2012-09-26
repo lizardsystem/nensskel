@@ -3,6 +3,7 @@ ${buildout:directory}/var/log/django.log {
     # Supervisor also has its own build-in log rotation.
     weekly
     missingok
+    size 10M
     rotate 5
     compress
     delaycompress
