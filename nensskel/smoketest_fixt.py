@@ -1,4 +1,4 @@
-# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
 """Fixture for the smoketest.txt doctest"""
 
 import subprocess

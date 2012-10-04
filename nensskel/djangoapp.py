@@ -1,4 +1,4 @@
-# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
 import sys
 
 from paste.script import templates
