@@ -1,5 +1,7 @@
 [buildout]
 index = http://packages.lizardsystem.nl
+extends =
+    http://packages.lizardsystem.nl/kgs/latest.cfg
 find-links =
 unzip = true
 prefer-final = true

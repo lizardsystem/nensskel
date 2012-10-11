@@ -5,7 +5,8 @@ Changelog for nensskel
 1.29 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- The library buildout.cfg now also extends the latest KGS; this
+  prevents problems with mismatched buildout versions.
 
 
 1.28 (2012-10-11)
