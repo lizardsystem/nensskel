@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.28 (unreleased)
+1.28 (2012-10-11)
 -----------------
 
 - Fixed license header (small tweak only: it pointed to LICENSE.txt
