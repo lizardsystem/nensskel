@@ -5,7 +5,11 @@ Changelog for nensskel
 1.28 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Fixed license header (small tweak only: it pointed to LICENSE.txt
+  instead of the .rst one).
+
+- Added max log size of 10MB to the logrotate script in the lizard
+  site template.
 
 
 1.27 (2012-09-24)
