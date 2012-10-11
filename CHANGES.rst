@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.29 (unreleased)
+1.29 (2012-10-11)
 -----------------
 
 - The library buildout.cfg now also extends the latest KGS; this
