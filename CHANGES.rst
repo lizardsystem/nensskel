@@ -5,7 +5,8 @@ Changelog for nensskel
 1.30 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added a django-session-cleanup-cronjob recipe for production and staging,
+  which cleans old sessions in the database.
 
 
 1.29 (2012-10-11)

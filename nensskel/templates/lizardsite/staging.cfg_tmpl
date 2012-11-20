@@ -3,6 +3,7 @@ extends = development.cfg
 parts +=
     supervisor-cronjob
     collectstatic
+    django-session-cleanup-cronjob
 
 
 [django]
