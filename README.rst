@@ -34,7 +34,7 @@ way we like it.
 
 It does, however, give you a good example for full django applications/sites
 with a complete setup.  For example, the django sites come with a full-blown
-apache config.  And django-staticfiles is included for the easy css/js setup.
+nginx config.  And django-staticfiles is included for the easy css/js setup.
 
 
 Example for your own skeleton
