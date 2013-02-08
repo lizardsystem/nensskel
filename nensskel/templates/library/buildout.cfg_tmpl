@@ -43,7 +43,9 @@ ${project} =
 
 [test]
 recipe = pbp.recipe.noserunner
-eggs = ${project}
+eggs =
+    ${project}
+    ${project}[test]
 defaults = ${project}
 
 
@@ -59,8 +61,7 @@ interpreter = python
 eggs =
     \${buildout:eggs}
 # Development tools
-    eazysvn
-    coverage
+    createcoverage
     pep8
     zest.releaser
 
