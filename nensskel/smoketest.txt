@@ -97,7 +97,11 @@ Do the smoke tests:
     >>> pprint(settings)
     ['developmentsettings.py', 'settings.py', 'stagingsettings.py']
 
-And now for some serious buildout running
+And now for some serious buildout running. This is the best we can do to
+verify everything mostly works. We cannot run ``bin/test`` in them afterwards
+as not all data is filled in yet.
+
+The python library:
 
     >>> os.chdir(os.path.join(tmp, 'aaa'))
     >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
@@ -112,6 +116,7 @@ And now for some serious buildout running
     ...     print "succeeded"
     succeeded
 
+The lizard app:
 
     >>> os.chdir(os.path.join(tmp, 'li-zard'))
     >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
@@ -126,6 +131,7 @@ And now for some serious buildout running
     ...     print "succeeded"
     succeeded
 
+The lizard site:
 
     >>> os.chdir(os.path.join(tmp, 'nieuwegein'))
     >>> dont_care = system("ln -s development.cfg buildout.cfg")
