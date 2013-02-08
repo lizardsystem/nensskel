@@ -1,3 +1,5 @@
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
+# -*- coding: utf-8 -*-
 # Base Django settings, suitable for production.
 #
 # Imported (and partly overridden) by developmentsettings.py which also
@@ -8,6 +10,8 @@
 # database ports go into localsettings.py.  May your hear turn purple if you
 # ever put personal settings into this file or into developmentsettings.py!
 #
+from __future__ import unicode_literals
+from __future__ import print_function
 
 import os
 import tempfile

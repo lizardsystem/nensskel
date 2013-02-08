@@ -1,4 +1,8 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from __future__ import print_function
+
 from django.conf.urls.defaults import include
 from django.conf.urls.defaults import patterns
 from django.conf.urls.defaults import url
