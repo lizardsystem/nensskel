@@ -83,7 +83,9 @@ project = ${package}
 projectegg = ${package}
 settings = developmentsettings
 test = ${package}
-eggs = ${project}
+eggs =
+    ${project}
+    ${project}[test]
 
 
 [omelette]

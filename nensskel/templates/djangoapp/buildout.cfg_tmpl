@@ -62,8 +62,9 @@ project = ${package}
 projectegg = ${package}
 settings = testsettings
 test = ${package}
-eggs = ${project}
-
+eggs =
+    ${project}
+    ${project}[test]
 
 [omelette]
 # Creates a nice parts/omelette with our used eggs

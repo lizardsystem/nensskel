@@ -8,7 +8,7 @@ Changelog for nensskel
 - Added a django-session-cleanup-cronjob part for production and staging,
   which cleans old sessions in the database.
 
-- Added nose coverage report setup for Python libraries.
+- Added nose coverage report setup. And included mock by default.
 
 - Added ``__future__`` imports everywhere for print statements and unicode.
 
