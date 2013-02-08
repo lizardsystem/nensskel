@@ -11,6 +11,8 @@ Changelog for nensskel
 - Added nose coverage report setup. And included mock by default.
 
 - Added ``__future__`` imports everywhere for print statements and unicode.
+  Everywhere except django settings, btw, as that weirdly breaks the
+  testrunner!
 
 
 1.29 (2012-10-11)
