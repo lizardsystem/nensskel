@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.30 (unreleased)
+1.30 (2013-02-11)
 -----------------
 
 - Added buildout 2.0!
