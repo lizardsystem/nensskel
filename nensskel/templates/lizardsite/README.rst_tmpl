@@ -29,7 +29,7 @@ Set up a database (and yes, set up an admin user when asked)::
 
 And import two fixtures. The background_maps sets up a couple of lizard-map
 defaults. Democontent gives you an initial homepage and a link to an example
-WMS layer.
+WMS layer::
 
     $ bin/django loaddata background_maps
     $ bin/django loaddata democontent
