@@ -5,16 +5,15 @@ extends =
 find-links =
 unzip = true
 prefer-final = true
-versions = versions
+socket-timeout = 1
+show-picked-versions = true
 extensions =
     mr.developer
-    buildout-versions
 parts =
 #    sysegg
     test
     omelette
     console_scripts
-    pyflakes
     sphinx
 develop = .
 eggs =
@@ -24,8 +23,10 @@ eggs =
 [versions]
 # Specific pins
 ${project} =
+zc.buildout = 2.0.0
+zc.recipe.egg = 2.0.0a3
 
-# Reported by buildout-versions
+# Reported by buildout.
 
 
 [sources]
@@ -57,24 +58,15 @@ eggs = \${buildout:eggs}
 
 [console_scripts]
 recipe = zc.recipe.egg
+dependent-scripts = true
 interpreter = python
 eggs =
     \${buildout:eggs}
 # Development tools
     createcoverage
     pep8
+    pyflakes
     zest.releaser
-
-
-[pyflakes]
-# Hairy way to install pyflakes: old-style distutils script.
-recipe = zc.recipe.egg
-scripts =
-   pyflakes
-eggs =
-   pyflakes
-entry-points = pyflakes=pkg_resources:run_script
-arguments = 'pyflakes', 'pyflakes'
 
 
 [sphinx]

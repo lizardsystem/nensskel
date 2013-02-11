@@ -1,12 +1,13 @@
 [buildout]
 index = http://packages.lizardsystem.nl
 extends =
-    http://packages.lizardsystem.nl/kgs/3.1.14/versions.cfg
+    http://packages.lizardsystem.nl/kgs/3.1.23/versions.cfg
     server.cfg
 find-links =
 unzip = true
 prefer-final = true
-versions = versions
+show-picked-versions = true
+socket-timeout = 1
 extensions =
     mr.developer
     buildout-versions
@@ -16,7 +17,6 @@ parts =
     django
     omelette
     console_scripts
-    pyflakes
     sphinx
     pydev
     \${buildout:serverparts}
@@ -30,8 +30,10 @@ eggs =
 # Specific pins. We inherit lots of pins from the KGS, so if you add a
 # development egg, you really need to un-pin it here.
 ${project} =
+zc.buildout = 2.0.0
+zc.recipe.egg = 2.0.0a3
 
-# Reported by buildout-versions
+# Reported by buildout.
 
 
 [sources]
@@ -97,25 +99,16 @@ eggs = \${buildout:eggs}
 [console_scripts]
 recipe = zc.recipe.egg
 interpreter = python
+dependent-scripts = true
 eggs =
     \${buildout:eggs}
 # Development tools
     createcoverage
-    pep8
-    zest.releaser
-    sitesetup
     fabric
-
-
-[pyflakes]
-# Hairy way to install pyflakes: old-style distutils script.
-recipe = zc.recipe.egg
-scripts =
-   pyflakes
-eggs =
-   pyflakes
-entry-points = pyflakes=pkg_resources:run_script
-arguments = 'pyflakes', 'pyflakes'
+    pep8
+    pyflakes
+    sitesetup
+    zest.releaser
 
 
 [sphinx]
