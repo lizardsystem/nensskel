@@ -1,10 +1,4 @@
-[report]
+[run]
 omit =
-    /home/*/.buildout/eggs/*
-    /var/lib/hudson/.buildout/*
-    /usr/*
-    parts/*
-    eggs/*
-    */test*
-
-ignore_errors = true
+    */migrations/*
+    *settings.py

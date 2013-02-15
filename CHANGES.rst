@@ -5,7 +5,9 @@ Changelog for nensskel
 1.31 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Upgraded nensskel's own setup to buildout 2.0.
+
+- Updated nose/coverage test setup.
 
 
 1.30 (2013-02-11)
