@@ -1,17 +1,4 @@
 [run]
-include = ${package}/
-
-[report]
 omit =
     */migrations/*
-    */test*
-    /Library/*
-    *buildout/eggs/*
-    /usr/*
-    /var/lib/hudson/.buildout/*
-    /var/lib/jenkins/.buildout/*
-    eggs/*
-    local_checkouts/*
-    parts/*
-
-ignore_errors = true
+    *settings.py
