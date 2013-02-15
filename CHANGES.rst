@@ -7,7 +7,12 @@ Changelog for nensskel
 
 - Upgraded nensskel's own setup to buildout 2.0.
 
-- Updated nose/coverage test setup.
+- Updated nose/coverage test setup in the generated projects *and* in ourselves.
+
+- Added pydev support also to lib/djangoapp buildouts instead of only to the
+  site buildout.
+
+- Updated lizardsite demo fixture to the latest lizard-wms.
 
 
 1.30 (2013-02-11)
