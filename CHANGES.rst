@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.31 (unreleased)
+1.31 (2013-02-15)
 -----------------
 
 - Upgraded nensskel's own setup to buildout 2.0.
