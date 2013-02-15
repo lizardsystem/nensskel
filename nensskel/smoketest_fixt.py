@@ -1,10 +1,11 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
 """Fixture for the smoketest.txt doctest"""
 
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
-import shutil
 
 MUST_CLOSE_FDS = not sys.platform.startswith('win')
 
@@ -30,6 +31,7 @@ def system(command, input=''):
 
 def setup_test(test):
     """Prepare an empty directory"""
+    test.original_dir = os.getcwd()
     test.tempdir = tempfile.mkdtemp()
     test.globs['tmp'] = test.tempdir
     test.globs['system'] = system
@@ -39,3 +41,4 @@ def teardown_test(test):
     """Clean up the temp directory"""
     shutil.rmtree(test.tempdir)
     # print "TEST DIR", test.tempdir
+    os.chdir(test.original_dir)
