@@ -15,6 +15,7 @@ parts =
     omelette
     console_scripts
     sphinx
+    pydev
 develop = .
 eggs =
     ${project}
@@ -74,3 +75,10 @@ recipe = collective.recipe.sphinxbuilder
 source = \${buildout:directory}/doc/source
 build = \${buildout:directory}/doc/build
 eggs = \${buildout:eggs}
+
+
+[pydev]
+recipe = pb.recipes.pydev
+eggs = \${buildout:eggs}
+pydevproject_path = \${buildout:directory}/.pydevproject
+extra_paths =
