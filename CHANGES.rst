@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.32 (unreleased)
+1.32 (2013-02-18)
 -----------------
 
 - Bugfix: there was still a ``buildout-versions`` in the lizardsite template.
