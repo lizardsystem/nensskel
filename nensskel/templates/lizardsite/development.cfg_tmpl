@@ -10,7 +10,6 @@ show-picked-versions = true
 socket-timeout = 1
 extensions =
     mr.developer
-    buildout-versions
 parts =
     sysegg
     mkdir
