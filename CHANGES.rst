@@ -7,6 +7,8 @@ Changelog for nensskel
 
 - Corrected sentry/raven setup.
 
+- Prepare django apps and sites to be translatable with Transifex.
+
 
 1.32 (2013-02-18)
 -----------------

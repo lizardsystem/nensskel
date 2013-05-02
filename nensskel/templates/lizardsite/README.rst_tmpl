@@ -31,6 +31,12 @@ nensskel.
   "repository url" fields to ``git@github.com:nens/${project}.git``. The rest
   of the settings should be OK.
 
+- The project is prepared to be translated with Lizard's
+  `Transifex <http://translations.lizard.net/>`_ server. For details about
+  pushing translation files to and fetching translation files from the
+  Transifex server, see the ``nens/translations`` `documentation
+  <https://github.com/nens/translations/blob/master/README.rst>`_.
+
 Later on, before releasing the site, adjust ``fabfile.cfg`` to point at the
 correct server and configure raven/sentry and gaug.es in the django settings.
 
