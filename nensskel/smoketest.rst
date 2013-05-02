@@ -54,6 +54,7 @@ Do the smoke tests:
     >>> pprint(contents)
     ['.coveragerc',
      '.gitignore',
+     '.tx',
      'CHANGES.rst',
      'CREDITS.rst',
      'LICENSE.rst',
@@ -74,6 +75,7 @@ Do the smoke tests:
     >>> pprint(contents)
     ['.coveragerc',
      '.gitignore',
+     '.tx',
      'CHANGES.rst',
      'CREDITS.rst',
      'LICENSE.rst',
