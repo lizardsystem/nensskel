@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.33 (unreleased)
+1.33 (2013-05-02)
 -----------------
 
 - Corrected sentry/raven setup.
