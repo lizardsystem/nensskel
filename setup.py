@@ -44,6 +44,7 @@ setup(
             'nens_library = nensskel.library:Library',
             'nens_djangoapp = nensskel.djangoapp:Djangoapp',
             'nens_lizardsite = nensskel.lizardsite:Lizardsite',
+            'nens_objectsite = nensskel.objectsite:Objectsite',
             ],
         },
     )
