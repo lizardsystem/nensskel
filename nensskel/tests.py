@@ -8,6 +8,7 @@ import mock
 
 class TestObjectSite(unittest.TestCase):
     def setUp(self):
+        self.maxDiff = None
         self.cwd = os.getcwd()
         self.tempdir = tempfile.mkdtemp()
         os.chdir(self.tempdir)
@@ -30,24 +31,38 @@ class TestObjectSite(unittest.TestCase):
 
         paste_dir = os.path.join(self.tempdir, 'testsite')
 
-        dir_contents = ['.coveragerc',
+        dir_contents = ['setup.py',
+                        'SOURCES.txt',
+                        'entry_points.txt',
+                        'dependency_links.txt',
+                        'top_level.txt',
+                        'not-zip-safe',
+                        'PKG-INFO',
+                        'requires.txt',
+                        'project.rst',
+                        'index.rst',
+                        'conf.py',
+                        'code.rst',
+                        'config',
+                        '.coveragerc',
                         '.gitignore',
-                        '.tx',
+                        'README.rst',
                         'CHANGES.rst',
                         'CREDITS.rst',
                         'LICENSE.rst',
                         'MANIFEST.in',
-                        'README.rst',
                         'bootstrap.py',
-                        'development.cfg',
-                        'doc',
-                        'etc',
-                        'fabfile.cfg',
-                        'fabfile.py',
-                        'nieuwegein',
+                        'base.cfg',
                         'production.cfg',
-                        'server.cfg',
-                        'setup.cfg',
-                        'setup.py',
-                        'staging.cfg']
-        self.assertEquals(os.listdir(paste_dir), dir_contents)
+                        'staging.cfg',
+                        'development.cfg',
+                        'base.py',
+                        'production.py',
+                        'staging.py',
+                        'development.py']
+        objectsitefiles = []
+        for root, dirs, files in os.walk(paste_dir):
+            for file in files:
+                objectsitefiles.append(file)
+
+        self.assertItemsEqual(objectsitefiles, dir_contents)
