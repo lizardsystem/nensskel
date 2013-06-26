@@ -1,0 +1,61 @@
+[buildout]
+extends = buildout/base.cfg
+extensions =
+    mr.developer
+parts =
+    omelette
+    console_scripts
+    sphinx
+    pydev
+auto-checkout =
+eggs +=
+    # Development tools.
+    createcoverage
+    fabric
+    pep8
+    pyflakes
+    sitesetup
+    zest.releaser
+
+
+[sources]
+# Sources that mr.developer can check out and add as development egg.
+# If one of them is absolutely necessary, add its name to the "auto-checkout"
+# in [buildout].
+# Example:
+# lizard-ui = git git@github.com:lizardsystem/lizard-ui.git
+
+
+[django]
+# Sets up django for testing our application.
+# See http://jacobian.org/writing/django-apps-with-buildout/
+settings = settings.development
+test = ${package}
+
+
+[omelette]
+# Creates a nice parts/omelette with our used eggs
+recipe = collective.recipe.omelette
+eggs = \${buildout:eggs}
+
+
+[console_scripts]
+recipe = zc.recipe.egg
+interpreter = python
+dependent-scripts = true
+eggs =
+    \${buildout:eggs}
+
+
+[sphinx]
+recipe = collective.recipe.sphinxbuilder
+source = \${buildout:directory}/doc/source
+build = \${buildout:directory}/doc/build
+eggs = \${buildout:eggs}
+
+
+[pydev]
+recipe = pb.recipes.pydev
+eggs = \${buildout:eggs}
+pydevproject_path = \${buildout:directory}/.pydevproject
+extra_paths =
