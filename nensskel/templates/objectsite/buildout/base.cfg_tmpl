@@ -42,4 +42,4 @@ eggs =
 # Note: ideally, should clean everything referencing the session_key as well
 recipe = z3c.recipe.usercrontab
 times = @daily
-command = ${buildout:bin-directory}/django cleanup
+command = \${buildout:bin-directory}/django cleanup
