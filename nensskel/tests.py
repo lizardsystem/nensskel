@@ -3,6 +3,8 @@ import shutil
 import tempfile
 import unittest
 
+import mock
+
 
 class TestObjectSite(unittest.TestCase):
     def setUp(self):
@@ -18,10 +20,12 @@ class TestObjectSite(unittest.TestCase):
         """Check code from run."""
         assert(True)
 
-    def test_created_files(self):
+    @mock.patch('sys.exit')
+    def test_created_files(self, sys_exit):
         """Check if all the necessary files are created."""
         import paste.script.command
         args = ['create', 'testsite', '-t', 'nens_objectsite']
+
         paste.script.command.run(args)
 
         paste_dir = os.path.join(self.tempdir, 'testsite')
