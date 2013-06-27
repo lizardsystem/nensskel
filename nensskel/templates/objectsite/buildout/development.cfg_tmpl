@@ -2,14 +2,13 @@
 extends = buildout/base.cfg
 extensions =
     mr.developer
-parts =
+parts +=
     omelette
     console_scripts
     sphinx
     pydev
 auto-checkout =
 eggs +=
-    # Development tools.
     createcoverage
     fabric
     pep8
@@ -29,6 +28,7 @@ eggs +=
 [django]
 # Sets up django for testing our application.
 # See http://jacobian.org/writing/django-apps-with-buildout/
+extends = buildout/base.cfg
 settings = settings.development
 test = ${package}
 

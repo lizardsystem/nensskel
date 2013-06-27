@@ -6,4 +6,5 @@ parts +=
 
 [django]
 # Use production settings.
+extends = buildout/base.cfg
 settings = settings.production

@@ -4,6 +4,7 @@ unzip = true
 prefer-final = true
 show-picked-versions = true
 socket-timeout = 1
+develop = .
 eggs = 
     ${project}
 parts =
