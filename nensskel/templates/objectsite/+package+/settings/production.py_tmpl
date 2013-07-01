@@ -9,5 +9,13 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    'default': {
+        'KEY_PREFIX': BUILDOUT_DIR,
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
 # TODO: add production gauges ID here.
 GAUGES_SITE_ID = ''

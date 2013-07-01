@@ -31,3 +31,6 @@ htmlcov/
 
 #Mr Developer
 .mr.developer.cfg
+
+# vim
+*.swp

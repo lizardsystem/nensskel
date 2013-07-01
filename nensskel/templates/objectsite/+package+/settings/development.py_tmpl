@@ -20,8 +20,8 @@ DATABASES = {
     # that as an error.
     'default': {
         # If you want to use postgres, use the two lines below.
-        # 'NAME': '${package}',
-        # 'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': '${package}',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'USER': 'buildout',
         'PASSWORD': 'buildout',
         'HOST': '',  # empty string for localhost.

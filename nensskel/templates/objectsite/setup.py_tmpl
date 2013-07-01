@@ -6,18 +6,19 @@ long_description = '\n\n'.join([
     open('README.rst').read(),
     open('CREDITS.rst').read(),
     open('CHANGES.rst').read(),
-    ])
+])
 
 install_requires = [
     'Django',
     'django-extensions',
-    ],
+    'south'
+],
 
 tests_require = [
     'nose',
     'coverage',
     'mock',
-    ]
+]
 
 setup(name='${project}',
       version=version,
