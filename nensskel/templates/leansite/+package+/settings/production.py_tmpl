@@ -4,8 +4,12 @@ from .base import *
 
 DATABASES = {
     'default': {
+        'NAME': '${package}',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'USER': '${package}',
         'PASSWORD': '${production_db_password}',
+        'HOST': '',  # empty string for localhost.
+        'PORT': '',  # empty string for default.
     }
 }
 
@@ -18,4 +22,5 @@ CACHES = {
 }
 
 # TODO: add production gauges ID here.
+# https://lizard-developer-docs.readthedocs.org/en/latest/buildout.html#usage-statistics-gaug-es
 GAUGES_SITE_ID = ''

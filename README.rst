@@ -1,37 +1,43 @@
 Django code skeletons
 =====================
 
-``nensskel`` provides so-called "paster templates" for easy creation of new
-django applications, websites and python libraries.  They're not fully
-generic, as they originate within one company (see below).
+``nensskel`` provides so-called "paster templates" so you can easily create new
+Django applications, websites and python libraries.  They're not fully
+generic, as they originated within one company (see below).
 
-The nensskel script creates a directory structure with (some partially filled) 
-basic files (like a *README.rst* and a *setup.py*). Optionally it can create 
-a trunk/tags/branches structure in svn.
+The nensskel script creates a directory structure for you with (some 
+partially filled) basic files (like a ``README.rst`` and a ``setup.py``). 
+Optionally you can use it to automatically create a trunk/tags/branches 
+structure in svn.
 
 .. image:: https://secure.travis-ci.org/lizardsystem/nensskel.png?branch=master
    :target: http://travis-ci.org/#!/lizardsystem/nensskel
 
 Call the nensskel script to get usage information.
 
-Install with pip or easy_install::
+Installation is straightforward with easy_install::
 
     $ easy_install nensskel
 
+or with pip::
+    
+    $ pip install nensskel
+
 (Probably you need to run it with sudo on osx/linux).
 
-Update for new versions::
+Don't forget to update from time to time::
 
     $ easy_install --upgrade nensskel
+
 
 Available templates
 -------------------
 
 * **basic_package:**    A basic setuptools-enabled package
-* **nens_djangoapp:**   A buildout for nens django applications
+* **nens_djangoapp:**   A buildout for nens Django applications
 * **nens_library:**     A buildout for nens libraries
-* **nens_lizardsite:**  A buildout for nens lizard django sites
-* **nens_leansite:**  A buildout for nens django sites
+* **nens_lizardsite:**  A buildout for nens lizard Django sites
+* **nens_leansite:**  A buildout for nens Django sites (doesn't inherit from other templates)
 * **paste_deploy:**     A web application deployed through paste.deploy
 
 
@@ -39,11 +45,20 @@ Company-centricity
 ------------------
 
 Nensskel originates at `Nelen & Schuurmans <http://www.nelen-schuurmans.nl>`_.
-We set it up the way we like it and we change it the way we like it.
+We set it up the way we like it and we change it the way we like it so it might
+not fit your case 100%.
 
-It does, however, provide a good example for full django applications/sites,
-with a complete setup. For example, the django sites come with a full-blown
-nginx config. Django-staticfiles is included for easy css/js setup.
+But it does provide a good example to give you a head start with a completely
+setup Django application/site. For example, the Django sites come with a 
+full-blown nginx config and Django-staticfiles is included for easy css/js setup.
+
+If the available templates don't serve your need, you can do two things:
+1. Clone the repository and edit the template as you like; possibly submit a pull
+request
+2. Make your own template
+
+
+Drop us a line if you need help.
 
 
 Example for your own skeleton

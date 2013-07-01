@@ -17,7 +17,9 @@ CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 
 class Leansite(templates.Template):
     _template_dir = 'templates/leansite'
-    summary = "A buildout for nens lean django sites"
+    summary = """A buildout for nens lean django sites; note that this template
+    doesn't inherit from other templates like nens_djangoapp or nens_library so
+    you have to take care of Changelog and bootstrap.py yourself"""
     use_cheetah = True
 
     def run(self, command, output_dir, vars):

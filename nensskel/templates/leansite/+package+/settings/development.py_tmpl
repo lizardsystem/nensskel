@@ -19,7 +19,6 @@ DATABASES = {
     # the specified database exists. When the tests cannot run, Jenkins sees
     # that as an error.
     'default': {
-        # If you want to use postgres, use the two lines below.
         'NAME': '${package}',
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'USER': 'buildout',
