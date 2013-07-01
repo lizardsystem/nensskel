@@ -31,6 +31,8 @@ eggs +=
 extends = buildout/base.cfg
 settings = settings.development
 test = ${package}
+eggs +=
+    ${project}[test]
 
 
 [omelette]

@@ -31,10 +31,10 @@ paths =
 
 [django]
 recipe = djangorecipe
+project = ${package}
 projectegg = ${package}
-test = ${package}
 eggs =
-    ${project}[test]
+    ${project}
 
 
 [django-session-cleanup-cronjob]
