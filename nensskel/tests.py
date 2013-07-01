@@ -25,13 +25,15 @@ class TestObjectSite(unittest.TestCase):
     def test_created_files(self, sys_exit):
         """Check if all the necessary files are created."""
         import paste.script.command
-        args = ['create', 'testsite', '-t', 'nens_objectsite']
+        args = ['create', 'testsite', '-t', 'nens_leansite']
 
         paste.script.command.run(args)
 
         paste_dir = os.path.join(self.tempdir, 'testsite')
 
         dir_contents = ['setup.py',
+                        '__init__.py',
+                        '__init__.py',
                         'SOURCES.txt',
                         'entry_points.txt',
                         'dependency_links.txt',
@@ -60,9 +62,9 @@ class TestObjectSite(unittest.TestCase):
                         'production.py',
                         'staging.py',
                         'development.py']
-        objectsitefiles = []
+        leansitefiles = []
         for root, dirs, files in os.walk(paste_dir):
             for file in files:
-                objectsitefiles.append(file)
+                leansitefiles.append(file)
 
-        self.assertItemsEqual(objectsitefiles, dir_contents)
+        self.assertItemsEqual(leansitefiles, dir_contents)

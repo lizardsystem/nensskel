@@ -31,7 +31,7 @@ Available templates
 * **nens_djangoapp:**   A buildout for nens django applications
 * **nens_library:**     A buildout for nens libraries
 * **nens_lizardsite:**  A buildout for nens lizard django sites
-* **nens_objectsite:**  A buildout for nens django sites
+* **nens_leansite:**  A buildout for nens django sites
 * **paste_deploy:**     A web application deployed through paste.deploy
 
 

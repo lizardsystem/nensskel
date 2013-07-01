@@ -8,7 +8,7 @@ Usage, etc.
 Post-nensskel project setup TODO
 --------------------------------
 
-Here are some instructions on what to do after you've created a objectsite with
+Here are some instructions on what to do after you've created a leansite with
 nensskel.
 
 - Fill in a short description on https://github.com/nens/$project if you
@@ -23,7 +23,7 @@ nensskel.
   "Nelen & Schuurmans" and "Nelen & Schuurmans pull only" have access.
 
 - Add a new jenkins job at
-  http://buildbot.lizardsystem.nl/jenkins/view/objecten/newJob. Job name should
+  http://buildbot.lizardsystem.nl/jenkins/view/<subdir>/newJob. Job name should
   be "${project}", make the project a copy of the existing "wro" (for
   instance) project. On the next page, change the "github project" to
   ``https://github.com/nens/${project}/`` and
@@ -37,8 +37,8 @@ nensskel.
   <https://github.com/nens/translations/blob/master/README.rst>`_.
 
 - A site needs to be in `Sentry <https://sentry.lizard.net/>`_.
-  For more information: `Sentry integration <https://sentry.lizard.net/NenS/objecten/docs/django/>`.
-  The API key can be found here: `API Key <https://sentry.lizard.net/NenS/objecten/keys/>`.
+  For more information: `Sentry integration <https://sentry.lizard.net/NenS/<subdir>/docs/django/>`.
+  The API key can be found here: `API Key <https://sentry.lizard.net/NenS/<subdir>/keys/>`.
 
 
 Initial setup

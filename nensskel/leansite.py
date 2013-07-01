@@ -15,9 +15,9 @@ sys.setdefaultencoding('UTF-8')
 CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 
 
-class Objectsite(templates.Template):
-    _template_dir = 'templates/objectsite'
-    summary = "A buildout for nens object django sites"
+class Leansite(templates.Template):
+    _template_dir = 'templates/leansite'
+    summary = "A buildout for nens lean django sites"
     use_cheetah = True
 
     def run(self, command, output_dir, vars):
