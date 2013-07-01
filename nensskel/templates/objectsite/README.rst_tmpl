@@ -1,5 +1,5 @@
 $project
-==========================================
+========
 
 Introduction
 
@@ -42,18 +42,17 @@ nensskel.
 
 
 Initial setup
---------------------------------
+--------------
 
-Initially, there's no ``buildout.cfg``. You need to make that a symlink to the
-correct configuration. On your development machine, that is
-``buildout/development.cfg`` (and ``staging.cfg`` or ``production.cfg``, for instance
-on the server)::
+Initially, there's no ``buildout.cfg``. You have to make a symlink to the
+correct configuration. On your development machine that is ``buildout/development.cfg`` 
+(``staging.cfg`` and ``production.cfg``, respectively on staging and production::
 
     $ ln -s buildout/development.cfg buildout.cfg
 
-Then run bootstrap and buildout, as usual::
+Then run bootstrap and buildout::
 
-    $ python bootstrap.py
+    $ python buildout/bootstrap.py
     $ bin/buildout
 
 Set up a database (and yes, set up an admin user when asked)::

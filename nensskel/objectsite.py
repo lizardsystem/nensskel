@@ -6,6 +6,8 @@ import random
 
 from paste.script import templates
 
+from nensskel import utils
+
 # Bloody hack for cheetah
 reload(sys)
 sys.setdefaultencoding('UTF-8')
@@ -39,3 +41,6 @@ class Objectsite(templates.Template):
         vars['production_db_password'] = db_password1
         vars['staging_db_password'] = db_password2
         templates.Template.run(self, command, output_dir, vars)
+
+    def post(self, command, output_dir, vars):
+        utils.print_egginfo_removal_instructions(output_dir, vars)
