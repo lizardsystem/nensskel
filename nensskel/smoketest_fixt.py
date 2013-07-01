@@ -12,7 +12,6 @@ MUST_CLOSE_FDS = not sys.platform.startswith('win')
 
 def system(command, input=''):
     """commands.getoutput() replacement that also works on windows"""
-    #print "CMD: %r" % command
     p = subprocess.Popen(command,
                          shell=True,
                          stdin=subprocess.PIPE,
@@ -40,5 +39,4 @@ def setup_test(test):
 def teardown_test(test):
     """Clean up the temp directory"""
     shutil.rmtree(test.tempdir)
-    # print "TEST DIR", test.tempdir
     os.chdir(test.original_dir)

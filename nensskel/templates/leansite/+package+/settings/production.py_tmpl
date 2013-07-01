@@ -1,0 +1,26 @@
+# (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.rst.
+
+from .base import *
+
+DATABASES = {
+    'default': {
+        'NAME': '${package}',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'USER': '${package}',
+        'PASSWORD': '${production_db_password}',
+        'HOST': '',  # empty string for localhost.
+        'PORT': '',  # empty string for default.
+    }
+}
+
+CACHES = {
+    'default': {
+        'KEY_PREFIX': BUILDOUT_DIR,
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
+# TODO: add production gauges ID here.
+# https://lizard-developer-docs.readthedocs.org/en/latest/buildout.html#usage-statistics-gaug-es
+GAUGES_SITE_ID = ''

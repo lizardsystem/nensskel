@@ -1,0 +1,10 @@
+[buildout]
+extends = buildout/base.cfg
+parts +=
+    django-session-cleanup-cronjob
+
+
+[django]
+# Use staging settings.
+extends = buildout/base.cfg
+settings = settings.staging

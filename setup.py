@@ -5,19 +5,21 @@ version = '1.34.dev0'
 long_description = '\n\n'.join(
     [open('README.rst').read(),
      open('CHANGES.rst').read(),
-     ])
+     ]
+)
 
 install_requires = [
     'setuptools',
     'pkginfo',
     'Cheetah',
     'PasteScript>=1.6',
-    ]
+]
 
 tests_require = [
     'nose',
     'coverage',
-    ]
+    'mock'
+]
 
 
 setup(
@@ -39,11 +41,12 @@ setup(
     entry_points={
         'console_scripts': [
             'nensskel = nensskel.cmdline:main',
-            ],
+        ],
         'paste.paster_create_template': [
             'nens_library = nensskel.library:Library',
             'nens_djangoapp = nensskel.djangoapp:Djangoapp',
             'nens_lizardsite = nensskel.lizardsite:Lizardsite',
-            ],
-        },
-    )
+            'nens_leansite = nensskel.leansite:Leansite',
+        ],
+    },
+)

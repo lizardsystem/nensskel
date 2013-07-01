@@ -1,0 +1,6 @@
+Code documentation
+==================
+
+.. automodule:: ${package}.views
+   :members:
+

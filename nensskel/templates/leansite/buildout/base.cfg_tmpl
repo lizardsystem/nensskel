@@ -1,0 +1,46 @@
+[buildout]
+index = http://packages.lizardsystem.nl
+unzip = true
+prefer-final = true
+show-picked-versions = true
+socket-timeout = 1
+develop = .
+eggs = 
+    ${project}
+parts =
+    sysegg
+    mkdir
+    django
+
+
+[sysegg]
+# Add eggs here that are best handled through OS-level packages.
+recipe = syseggrecipe
+force-sysegg = true
+eggs =
+    psycopg2
+
+
+[mkdir]
+recipe = z3c.recipe.mkdir
+paths =
+    \${buildout:directory}/var/static
+    \${buildout:directory}/var/media
+    \${buildout:directory}/var/log
+
+
+[django]
+recipe = djangorecipe
+project = ${package}
+projectegg = ${package}
+eggs =
+    ${project}
+
+
+[django-session-cleanup-cronjob]
+# Cleans expired sessions from the database every night
+# Note: "changed in Django 1.5: cleanup is deprecated. Use clearsessions instead."
+# Note: ideally, should clean everything referencing the session_key as well
+recipe = z3c.recipe.usercrontab
+times = @daily
+command = \${buildout:bin-directory}/django cleanup
