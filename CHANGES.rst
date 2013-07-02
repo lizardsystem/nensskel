@@ -7,6 +7,8 @@ Changelog for nensskel
 
 - Added the new leansite template.
 
+- Removed the deprecated GZipMiddleware from Django settings for all templates.
+
 
 1.33 (2013-05-02)
 -----------------

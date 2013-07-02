@@ -62,8 +62,6 @@ SECRET_KEY = '${secret_key}'
 ROOT_URLCONF = '${package}.urls'
 
 MIDDLEWARE_CLASSES = (
-    # Gzip needs to be at the top.
-    'django.middleware.gzip.GZipMiddleware',
     # Below is the default list, don't modify it.
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
