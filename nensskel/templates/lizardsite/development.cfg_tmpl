@@ -4,7 +4,6 @@ extends =
     http://packages.lizardsystem.nl/kgs/3.1.30/versions.cfg
     server.cfg
 find-links =
-unzip = true
 prefer-final = true
 show-picked-versions = true
 socket-timeout = 1
