@@ -13,8 +13,8 @@ parts =
 #    sysegg
     mkdir
     django
-#    node
-#    bower_modules
+    node
+    bower_modules
     omelette
     console_scripts
     sphinx
@@ -91,21 +91,21 @@ eggs =
     ${project}[test]
 
 
-# [node]
-# recipe = gp.recipe.node
-# npms =
-#     bower
-#     grunt-cli
-# scripts =
-#     bower
-#     grunt
+[node]
+recipe = gp.recipe.node
+npms =
+    bower
+    grunt-cli
+scripts =
+    bower
+    grunt
 
 
-# [bower_modules]
-# recipe = collective.recipe.cmd
-# on_install = true
-# on_update = true
-# cmds = \${buildout:directory}/bin/bower install; echo "\nBower client-side modules updated.\n"
+[bower_modules]
+recipe = collective.recipe.cmd
+on_install = true
+on_update = true
+cmds = \${buildout:directory}/bin/bower install; echo "\nBower client-side modules updated.\n"
 
 
 [omelette]

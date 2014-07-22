@@ -13,11 +13,6 @@
 import os
 import tempfile
 
-from lizard_ui.settingshelper import setup_logging
-from lizard_ui.settingshelper import STATICFILES_FINDERS
-
-STATICFILES_FINDERS = STATICFILES_FINDERS
-
 # Set matplotlib defaults.
 # Uncomment this when using lizard-map.
 # import matplotlib
@@ -36,7 +31,67 @@ BUILDOUT_DIR = os.path.abspath(os.path.join(SETTINGS_DIR, '..'))
 
 # Set up logging. No console logging. By default, var/log/django.log and
 # sentry at 'WARN' level.
-LOGGING = setup_logging(BUILDOUT_DIR, console_level=None, sentry_level='WARN')
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s %(name)s %(levelname)s\n    %(message)s',
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'django.utils.log.NullHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'logfile': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'verbose',
+            'filename': os.path.join(BUILDOUT_DIR,
+                                     'var', 'log', 'django.log'),
+        },
+        'sentry': {
+            'level': 'WARN',
+            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'logfile', 'sentry'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        'django.db.backends': {
+            'handlers': ['null'],  # Quiet by default!
+            'propagate': False,
+            'level': 'DEBUG',
+        },
+        'south': {
+            'handlers': ['console', 'logfile', 'sentry'],
+            'propagate': False,
+            'level': 'INFO',  # Suppress the huge output in tests
+        },
+        'factory': {
+            'handlers': ['console'],
+            'propagate': False,
+            'level': 'INFO',  # Suppress the huge output in tests
+        },
+        'django.request': {
+            'handlers': ['console', 'logfile', 'sentry'],
+            'propagate': False,
+            'level': 'ERROR',  # WARN also shows 404 errors
+        },
+    }
+}
 
 # Triple blast.  Needed to get matplotlib from barfing on the server: it needs
 # to be able to write to some directory.
@@ -106,6 +161,17 @@ MEDIA_URL = '/media/'
 # "{{ MEDIA_URL }}mypackage/my.css".
 STATIC_URL = '/static_media/'
 
+STATICFILES_FINDERS = (
+    'staticfiles.finders.FileSystemFinder',
+    'staticfiles.finders.AppDirectoriesFinder',
+    # Enable support for django-compressor.
+    'compressor.finders.CompressorFinder',
+    )
+STATICFILES_DIRS = [
+    os.path.join(BUILDOUT_DIR, 'bower_components'),
+    # ^^^ bower-managed files.
+]
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '${secret_key}'
 
@@ -145,7 +211,7 @@ INSTALLED_APPS = (
     'south',
     'compressor',
     'staticfiles',
-    'raven.contrib.django',
+    'raven.contrib.django.raven_compat',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -158,8 +224,8 @@ INSTALLED_APPS = (
 )
 
 # TODO: Put your real url here to configure Sentry.
-RAVEN_CONFIG = {
-    'dsn': ('http://some:hash@your.sentry.site/')}
+# RAVEN_CONFIG = {
+#     'dsn': ('http://some:hash@your.sentry.site/some_number')}
 
 # TODO: add gauges ID here. Generate one separately for the staging, too.
 UI_GAUGES_SITE_ID = ''  # Staging has a separate one.
