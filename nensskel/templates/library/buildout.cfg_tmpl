@@ -24,8 +24,8 @@ eggs =
 [versions]
 # Specific pins
 ${project} =
-zc.buildout = 2.0.0
-zc.recipe.egg = 2.0.0a3
+zc.buildout = 2.2.1
+zc.recipe.egg = 2.0.1
 
 # Reported by buildout.
 

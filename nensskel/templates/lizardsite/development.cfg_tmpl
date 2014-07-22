@@ -29,6 +29,8 @@ eggs =
 # Specific pins. We inherit lots of pins from the KGS, so if you add a
 # development egg, you really need to un-pin it here.
 ${project} =
+zc.buildout = 2.2.1
+zc.recipe.egg = 2.0.1
 
 # Reported by buildout.
 
