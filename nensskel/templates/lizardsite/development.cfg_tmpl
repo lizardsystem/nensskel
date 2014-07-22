@@ -30,9 +30,11 @@ eggs =
 # Specific pins. We inherit lots of pins from the KGS, so if you add a
 # development egg, you really need to un-pin it here.
 ${project} =
+Django = 1.6.5
+gp.recipe.node = 0.10.28.0
+raven = 5.0.0
 zc.buildout = 2.2.1
 zc.recipe.egg = 2.0.1
-gp.recipe.node = 0.10.28.0
 
 # Reported by buildout.
 

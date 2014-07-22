@@ -42,3 +42,6 @@ etc/*.logrotate
 
 # Ignore local settings files
 local*settings*.py
+
+# Bower files
+bower_components/
