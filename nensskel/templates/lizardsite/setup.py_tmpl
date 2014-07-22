@@ -18,6 +18,7 @@ install_requires = [
     'lizard-ui',
     'python-memcached',
     'raven',
+    'south',
     'werkzeug',
     # Maptree and wms are included for demo purposes; almost every site needs
     # them anyway.
