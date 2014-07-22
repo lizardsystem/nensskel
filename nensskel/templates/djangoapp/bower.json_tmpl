@@ -1,0 +1,21 @@
+{
+    "name": "${project}",
+    "version": "0.1dev",
+    "homepage": "https://github.com/%(github_organization)s/%(project)s",
+    "authors": [
+        "TODO <TODO@nelen-schuurmans.nl>"
+    ],
+    "license": "GPL",
+    "private": true,
+    "dependencies": {
+        // "bootstrap": "3.0.3",
+        // "fira": "v0.1.0"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

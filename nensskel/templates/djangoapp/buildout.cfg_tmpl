@@ -12,6 +12,8 @@ parts =
 #    sysegg
     mkdir
     django
+#    node
+#    bower_modules
     omelette
     console_scripts
     sphinx
@@ -27,6 +29,7 @@ eggs =
 ${project} =
 zc.buildout = 2.2.1
 zc.recipe.egg = 2.0.1
+gp.recipe.node = 0.10.28.0
 
 # Reported by buildout.
 
@@ -44,6 +47,23 @@ zc.recipe.egg = 2.0.1
 #    PIL
 #    matplotlib
 #    pyproj
+
+
+# [node]
+# recipe = gp.recipe.node
+# npms =
+#     bower
+#     grunt-cli
+# scripts =
+#     bower
+#     grunt
+
+
+# [bower_modules]
+# recipe = collective.recipe.cmd
+# on_install = true
+# on_update = true
+# cmds = ${buildout:directory}/bin/bower install; echo "\nBower client-side modules updated.\n"
 
 
 [mkdir]
