@@ -45,7 +45,7 @@ zc.recipe.egg = 2.0.0a3
 
 [sysegg]
 # Add eggs here that are best handled through OS-level packages.
-recipe = osc.recipe.sysegg
+recipe = syseggrecipe
 force-sysegg = true
 eggs =
     psycopg2
