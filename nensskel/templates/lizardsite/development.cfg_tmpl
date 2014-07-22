@@ -105,7 +105,7 @@ eggs =
 # recipe = collective.recipe.cmd
 # on_install = true
 # on_update = true
-# cmds = ${buildout:directory}/bin/bower install; echo "\nBower client-side modules updated.\n"
+# cmds = \${buildout:directory}/bin/bower install; echo "\nBower client-side modules updated.\n"
 
 
 [omelette]
