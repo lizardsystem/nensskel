@@ -25,6 +25,7 @@ pip-log.txt
 nosetests.xml
 htmlcov
 .codeintel
+coverage.xml
 
 #Translations
 # *.mo
