@@ -1,7 +1,7 @@
 {
     "name": "${project}",
     "version": "0.1dev",
-    "homepage": "https://github.com/%(github_organization)s/%(project)s",
+    "homepage": "https://github.com/${github_organization}/${project}",
     "authors": [
         "TODO <TODO@nelen-schuurmans.nl>"
     ],
