@@ -1,11 +1,11 @@
 [buildout]
-index = http://packages.lizardsystem.nl
+index = https://packages.lizard.net
 unzip = true
 prefer-final = true
 show-picked-versions = true
 socket-timeout = 1
 develop = .
-eggs = 
+eggs =
     ${project}
 parts =
     sysegg

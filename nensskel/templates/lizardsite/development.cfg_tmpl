@@ -1,7 +1,7 @@
 [buildout]
-index = http://packages.lizardsystem.nl
+index = https://packages.lizard.net
 extends =
-    http://packages.lizardsystem.nl/kgs/3.1.30/versions.cfg
+    https://packages.lizard.net/kgs/3.1.30/versions.cfg
     server.cfg
 find-links =
 prefer-final = true
