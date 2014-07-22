@@ -210,7 +210,6 @@ INSTALLED_APPS = (
     'lizard_security',
     'south',
     'compressor',
-    'staticfiles',
     'raven.contrib.django.raven_compat',
     'django_extensions',
     'django.contrib.admin',
