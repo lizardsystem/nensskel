@@ -10,7 +10,7 @@ socket-timeout = 1
 extensions =
     mr.developer
 parts =
-    sysegg
+#    sysegg
     mkdir
     django
     omelette
@@ -42,12 +42,12 @@ zc.recipe.egg = 2.0.1
 # lizard-ui = git git@github.com:lizardsystem/lizard-ui.git
 
 
-[sysegg]
-# Add eggs here that are best handled through OS-level packages.
-recipe = syseggrecipe
-force-sysegg = true
-eggs =
-    psycopg2
+# [sysegg]
+# # Add eggs here that are best handled through OS-level packages.
+# recipe = syseggrecipe
+# force-sysegg = true
+# eggs =
+#     psycopg2
 #     matplotlib
 #     PIL
 #     pyproj

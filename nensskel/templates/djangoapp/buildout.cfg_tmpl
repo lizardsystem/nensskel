@@ -9,7 +9,7 @@ show-picked-versions = true
 extensions =
     mr.developer
 parts =
-    sysegg
+#    sysegg
     mkdir
     django
     omelette
@@ -36,11 +36,11 @@ zc.recipe.egg = 2.0.1
 # lizard-ui = git git@github.com:lizardsystem/lizard-ui.git
 
 
-[sysegg]
-recipe = syseggrecipe
-force-sysegg = true
-eggs =
-    psycopg2
+# [sysegg]
+# recipe = syseggrecipe
+# force-sysegg = true
+# eggs =
+#     psycopg2
 #    PIL
 #    matplotlib
 #    pyproj
