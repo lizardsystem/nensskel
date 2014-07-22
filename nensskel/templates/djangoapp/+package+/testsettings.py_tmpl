@@ -85,8 +85,6 @@ SECRET_KEY = 'This is not secret but that is ok.'
 INSTALLED_APPS = [
     '${package}',
     'lizard_ui',
-    'staticfiles',
-    'compressor',
     'south',
     'django_nose',
     'lizard_security',
@@ -97,6 +95,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.gis',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     ]
 ROOT_URLCONF = '${package}.urls'
 
@@ -118,12 +117,6 @@ STATIC_URL = '/static_media/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BUILDOUT_DIR, 'var', 'static')
 MEDIA_ROOT = os.path.join(BUILDOUT_DIR, 'var', 'media')
-STATICFILES_FINDERS = (
-    'staticfiles.finders.FileSystemFinder',
-    'staticfiles.finders.AppDirectoriesFinder',
-    # Enable support for django-compressor.
-    'compressor.finders.CompressorFinder',
-    )
 STATICFILES_DIRS = [
     os.path.join(BUILDOUT_DIR, 'bower_components'),
     # ^^^ bower-managed files.
