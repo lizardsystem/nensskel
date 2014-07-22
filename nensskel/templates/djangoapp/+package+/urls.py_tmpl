@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 from __future__ import print_function
 
-from django.conf.urls.defaults import include
-from django.conf.urls.defaults import patterns
-from django.conf.urls.defaults import url
+from django.conf.urls import include
+from django.conf.urls import patterns
+from django.conf.urls import url
 from django.contrib import admin
 from lizard_ui.urls import debugmode_urlpatterns
 
