@@ -106,7 +106,7 @@ as not all data is filled in yet.
 The python library:
 
     >>> os.chdir(os.path.join(tmp, 'aaa'))
-    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../aaa/bin'.
     ...
@@ -121,7 +121,7 @@ The python library:
 The lizard app:
 
     >>> os.chdir(os.path.join(tmp, 'li-zard'))
-    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../li-zard/bin'.
     ...
@@ -137,7 +137,7 @@ The lizard site:
 
     >>> os.chdir(os.path.join(tmp, 'nieuwegein'))
     >>> dont_care = system("ln -s development.cfg buildout.cfg")
-    >>> print 'start', system('python bootstrap.py -d') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    >>> print 'start', system('python bootstrap.py') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
     start...
     Creating directory .../nieuwegein/bin'.
     ...
