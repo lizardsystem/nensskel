@@ -20,3 +20,6 @@ DATABASES = {
 
 # TODO: add staging gauges ID here.
 UI_GAUGES_SITE_ID = ''  # Staging has a separate one.
+
+# Add your staging name here. Django 1.6+
+ALLOWED_HOSTS = ['${project}.staging.lizard.net']

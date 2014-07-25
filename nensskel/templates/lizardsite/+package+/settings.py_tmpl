@@ -224,6 +224,8 @@ INSTALLED_APPS = (
 # TODO: add gauges ID here. Generate one separately for the staging, too.
 UI_GAUGES_SITE_ID = ''  # Staging has a separate one.
 
+# Add your production name here. Django 1.6+
+ALLOWED_HOSTS = ['${project}.lizard.net']
 
 try:
     from ${package}.localproductionsettings import *
