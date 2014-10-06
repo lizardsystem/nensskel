@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.34 (unreleased)
+1.34 (2014-10-06)
 -----------------
 
 - Updated everything for django 1.6 (regarding imports) and buildout 2.x.
