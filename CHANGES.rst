@@ -5,7 +5,7 @@ Changelog for nensskel
 1.35 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Unpinned buildout default version. Updated bootstrap.py.
 
 
 1.34 (2014-10-06)
