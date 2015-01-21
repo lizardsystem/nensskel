@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.35 (unreleased)
+1.35 (2015-01-21)
 -----------------
 
 - Unpinned buildout default version. Updated bootstrap.py.
