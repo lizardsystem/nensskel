@@ -5,12 +5,6 @@ Changelog for nensskel
 1.37 (unreleased)
 -----------------
 
-- Nothing changed yet.
-
-
-1.36 (2015-09-19)
------------------
-
 - Update packages mitigating the 'ValueError: too many values to unpack'.
 
 - Updated versions, using new lizard5 KGS. You can just as well remove the
@@ -22,7 +16,7 @@ Changelog for nensskel
   #12).
   [reinout]
 
-- Using ``wsgi.py`` file and the new djangorecipe ``scripts-with-settings`
+- Using ``wsgi.py`` file and the new djangorecipe ``scripts-with-settings``
   option: this fixes the gunicorn (and celery) setup for modern
   django/gunicorn combinations.
   [reinout]
