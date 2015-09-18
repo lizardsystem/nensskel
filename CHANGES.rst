@@ -2,8 +2,8 @@ Changelog for nensskel
 ======================
 
 
-1.37 (unreleased)
------------------
+1.36.1 (2015-09-19)
+-------------------
 
 - Update packages mitigating the 'ValueError: too many values to unpack'.
 
