@@ -76,11 +76,11 @@ workers = 3
 # Sets up django for testing our application.
 # See http://jacobian.org/writing/django-apps-with-buildout/
 recipe = djangorecipe
-wsgi = true
-wsgilog = \${buildout:directory}/var/log/django.log
 project = ${package}
-projectegg = ${package}
 settings = developmentsettings
+scripts-with-settings =
+    gunicorn
+#   celery
 test = ${package}
 eggs =
     ${project}
