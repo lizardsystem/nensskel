@@ -24,13 +24,8 @@ eggs =
 
 
 [versions]
-# Specific pins. We inherit lots of pins from the KGS, so if you add a
-# development egg, you really need to un-pin it here.
+# Specific pins.
 ${project} =
-gp.recipe.node =
-raven =
-zc.buildout =
-zc.recipe.egg =
 
 # Reported by buildout.
 
@@ -81,12 +76,12 @@ paths =
 # See http://jacobian.org/writing/django-apps-with-buildout/
 recipe = djangorecipe
 project = ${package}
-projectegg = ${package}
 settings = testsettings
 test = ${package}
 eggs =
     ${project}
     ${project}[test]
+
 
 [omelette]
 # Creates a nice parts/omelette with our used eggs

@@ -7,6 +7,25 @@ Changelog for nensskel
 
 - Update packages mitigating the 'ValueError: too many values to unpack'.
 
+- Updated versions, using new lizard5 KGS. You can just as well remove the
+  'extends' line for your own projects, but at least for testing nensskel, I'm
+  keeping it in for now.
+  [reinout]
+
+- Fixed djangorecipe setup. Deprecated options have been removed (fixes
+  #12).
+  [reinout]
+
+- Using ``wsgi.py`` file and the new djangorecipe ``scripts-with-settings`
+  option: this fixes the gunicorn (and celery) setup for modern
+  django/gunicorn combinations.
+  [reinout]
+
+- Improved tests so that more buildout failures show up (like the necessary
+  djangorecipe changes from the previous point). The test setup now also
+  includes coverallls.io integration for coverage reports.
+  [reinout]
+
 
 1.35 (2015-01-21)
 -----------------
