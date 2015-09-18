@@ -1,7 +1,7 @@
 [buildout]
 index = https://packages.lizard.net
 extends =
-    https://packages.lizard.net/kgs/3.1.30/versions.cfg
+    https://packages.lizard.net/kgs/latest.cfg
     server.cfg
 find-links =
 prefer-final = true
@@ -27,14 +27,8 @@ eggs =
 
 
 [versions]
-# Specific pins. We inherit lots of pins from the KGS, so if you add a
-# development egg, you really need to un-pin it here.
+# Specific pins.
 ${project} =
-Django = 1.6.5
-gp.recipe.node =
-raven =
-zc.buildout =
-zc.recipe.egg =
 
 # Reported by buildout.
 
