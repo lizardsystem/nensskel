@@ -113,14 +113,12 @@ The python library:
     Creating directory .../aaa/bin'.
     ...
     Generated script .../aaa/bin/buildout...
-    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
-    >>> if 'Traceback' in output:
-    ...     print output
-    ... else:
-    ...     print "succeeded"
-    succeeded
-    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
-    True
+    >>> print 'start', system('bin/buildout') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Installing sphinx.
+    ...
+
+(We test for sphinx as that's the last part being installed).
 
 The lizard app:
 
@@ -130,14 +128,10 @@ The lizard app:
     Creating directory .../li-zard/bin'.
     ...
     Generated script .../li-zard/bin/buildout...
-    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
-    >>> if 'Traceback' in output:
-    ...     print output
-    ... else:
-    ...     print "succeeded"
-    succeeded
-    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
-    True
+    >>> print 'start', system('bin/buildout') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Installing sphinx.
+    ...
 
 The lizard site:
 
@@ -148,11 +142,7 @@ The lizard site:
     Creating directory .../nieuwegein/bin'.
     ...
     Generated script .../nieuwegein/bin/buildout...
-    >>> output = system('bin/buildout -t 1') # '-t 1' is the socket timeout...
-    >>> if 'Traceback' in output:
-    ...     print output
-    ... else:
-    ...     print "succeeded"
-    succeeded
-    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
-    True
+    >>> print 'start', system('bin/buildout') #doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+    start...
+    Installing sphinx.
+    ...
