@@ -119,6 +119,8 @@ The python library:
     ... else:
     ...     print "succeeded"
     succeeded
+    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
+    True
 
 The lizard app:
 
@@ -134,6 +136,8 @@ The lizard app:
     ... else:
     ...     print "succeeded"
     succeeded
+    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
+    True
 
 The lizard site:
 
@@ -150,3 +154,5 @@ The lizard site:
     ... else:
     ...     print "succeeded"
     succeeded
+    >>> 'sphinx' in os.listdir('bin')  # One of the last being installed
+    True
