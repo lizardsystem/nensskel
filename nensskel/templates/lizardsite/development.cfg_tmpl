@@ -118,10 +118,8 @@ eggs =
     \${buildout:eggs}
 # Development tools
     createcoverage
-    fabric
     pep8
     pyflakes
-    sitesetup
     zest.releaser
 
 

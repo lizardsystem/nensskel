@@ -35,7 +35,6 @@ Do the smoke tests:
     ['.coveragerc',
      '.gitignore',
      'CHANGES.rst',
-     'CREDITS.rst',
      'LICENSE.rst',
      'MANIFEST.in',
      'README.rst',
@@ -43,6 +42,8 @@ Do the smoke tests:
      'bootstrap.py',
      'buildout.cfg',
      'doc',
+     'monkeypatch_setuptools.py',
+     'monkeypatch_setuptools.pyc',
      'setup.cfg',
      'setup.py']
 
@@ -56,7 +57,6 @@ Do the smoke tests:
      '.gitignore',
      '.tx',
      'CHANGES.rst',
-     'CREDITS.rst',
      'LICENSE.rst',
      'MANIFEST.in',
      'README.rst',
@@ -65,6 +65,8 @@ Do the smoke tests:
      'buildout.cfg',
      'doc',
      'li_zard',
+     'monkeypatch_setuptools.py',
+     'monkeypatch_setuptools.pyc',
      'setup.cfg',
      'setup.py']
 
@@ -78,7 +80,6 @@ Do the smoke tests:
      '.gitignore',
      '.tx',
      'CHANGES.rst',
-     'CREDITS.rst',
      'LICENSE.rst',
      'MANIFEST.in',
      'README.rst',
@@ -87,8 +88,8 @@ Do the smoke tests:
      'development.cfg',
      'doc',
      'etc',
-     'fabfile.cfg',
-     'fabfile.py',
+     'monkeypatch_setuptools.py',
+     'monkeypatch_setuptools.pyc',
      'nieuwegein',
      'production.cfg',
      'server.cfg',

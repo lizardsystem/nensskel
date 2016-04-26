@@ -1,10 +1,10 @@
+import monkeypatch_setuptools
 from setuptools import setup
 
 version = '0.1dev'
 
 long_description = '\n\n'.join([
     open('README.rst').read(),
-    open('CREDITS.rst').read(),
     open('CHANGES.rst').read(),
     ])
 
@@ -12,7 +12,6 @@ install_requires = [
     'Django',
     'django-extensions',
     'django-nose',
-    'lizard-ui >= 4.0b5',
     ],
 
 tests_require = [
