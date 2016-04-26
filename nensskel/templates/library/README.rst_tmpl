@@ -20,9 +20,6 @@ nensskel.
 - Fill in your username and email address in the ``setup.py``, see the
   ``TODO`` fields. If you use it, also check the ``bower.json``.
 
-- Also add your name to ``CREDITS.rst``. It is open source software, so you
-  should claim credit!
-
 - Check https://github.com/nens/$project/settings/collaboration if the team
   "Nelen & Schuurmans" has access.
 
