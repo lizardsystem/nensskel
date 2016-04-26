@@ -14,16 +14,9 @@ install_requires = [
     'django-extensions',
     'django-nose',
     'gunicorn',
-    'lizard-map',
-    'lizard-ui',
     'python-memcached',
     'raven',
-    'south',
     'werkzeug',
-    # Maptree and wms are included for demo purposes; almost every site needs
-    # them anyway.
-    'lizard-maptree',
-    'lizard-wms',
     ],
 
 tests_require = [
