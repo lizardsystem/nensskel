@@ -2,7 +2,7 @@ Changelog for nensskel
 ======================
 
 
-1.37 (unreleased)
+1.37 (2016-04-26)
 -----------------
 
 - Removed lizard-ui/lizard-map and so.
