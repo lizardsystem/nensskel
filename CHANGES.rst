@@ -5,7 +5,12 @@ Changelog for nensskel
 1.37 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Removed lizard-ui/lizard-map and so.
+
+- Removed sitesetup/fabfile.
+
+- South is also removed, so you need to use django 1.8+ for the
+  migrations. Note that this version isn't included in the KGS yet.
 
 
 1.36.1 (2015-09-19)
